@@ -1,0 +1,14 @@
+.hero-wrapper {
+    background-image: url('/background.jpg');
+    background-position: top;
+    background-size: cover;
+}
+@keyframes pulse {
+    50% {
+        opacity: .5;
+    }
+
+    0%, 100%{
+        opacity: 1;
+    }
+}

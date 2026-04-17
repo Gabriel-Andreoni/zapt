@@ -1,0 +1,13 @@
+.services-img {
+    animation: spin 90s linear infinite;
+}
+
+@keyframes spin {
+    50% {
+        rotate: 1turn;
+    }
+
+    0%, 100% {
+        rotate: 0turn;
+    }
+}
