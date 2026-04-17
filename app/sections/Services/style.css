@@ -1,5 +1,5 @@
 .services-img {
-    animation: spin 90s linear infinite;
+    animation: spin 90s ease-in-out infinite;
 }
 
 @keyframes spin {
