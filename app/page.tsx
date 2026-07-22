@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 
 import Hero from "./sections/Hero";
 import Loader from "./components/Loader";
-import Services from "./sections/Services";
 import Orcamento from "./sections/Orcamento";
+import { Services } from "./sections/Services";
 
 export default function Home() {
   const [loaderOn, setLoaderOn] = useState<Boolean>(false);

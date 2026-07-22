@@ -1,21 +1,18 @@
-
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { PageTitle } from '@/app/components/PageTitle';
+import './style.css';
 import { Form } from './_components/form';
+
 
 export default function Orcamento() {
     return (
-        <section className="w-full h-dvh flex">
-            <div className="w-8/12 h-full p-12">
-                <h2 className="w-11/12 font-extrabold text-4xl text-pretty">Dê o próximo passo na evolução tecnológica da sua empresa.</h2>
-                
-                <Form />
+        <section className="w-full h-dvh pl-54 py-24 flex justify-start items-center gap-6">
+            <div className="message-container w-4/12 h-full rounded relative">
             </div>
-            <div className="w-5/12 h-full pr-12 flex justify-center items-center">
-                <DotLottieReact
-                    src="https://lottie.host/824a6332-a1bd-4ceb-9d6f-4e22bb596252/YiIv37POb1.lottie"
-                    loop
-                    autoplay
-                />
+
+            <div className="w-6/12 h-full pt-10 flex flex-col justify-between">
+                <PageTitle title='Entre em contato' color='#0554f2' size='24' />
+                <h2 className="mt-6 leading-12 text-4xl font-bold text-pretty">Pronto para construir <br/> O futuro do seu negócio?</h2>
+                <Form />
             </div>
         </section>
     )

@@ -1,0 +1,19 @@
+.message-container {
+    background-image: url("/message.jpg");
+    background-position: center;
+    background-size: cover;
+
+    &::before {
+        content: "";
+
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        position: absolute;
+        inset: 0;
+
+        background: #00000099;
+    }
+}
