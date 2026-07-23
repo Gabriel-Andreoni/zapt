@@ -1,28 +1,7 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local';
+import { spaceGrotesk } from "./fonts/fonts";
 import "./globals.css";
 
-const helvetica = localFont({
-  src: [
-    {
-      path: './fonts/HelveticaNeueMedium.otf',
-      weight: '500',
-      style: 'normal'
-    },
-
-    {
-      path: './fonts/HelveticaNeueHeavy.otf',
-      weight: '800',
-      style: 'normal'
-    },
-
-    {
-      path: './fonts/HelveticaNeueLight.otf',
-      weight: '300',
-      style: 'normal'
-    }
-  ]
-})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,7 +16,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${helvetica.className} h-full antialiased`}
+      className={`${spaceGrotesk.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
