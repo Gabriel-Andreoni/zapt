@@ -1,11 +1,11 @@
 import { ArrowRight, Code2, Globe, Sparkles, Zap } from "lucide-react";
-import Menu from "../Menu";
+import Header from "../Menu";
 
 export default function Hero() {
   return (
     <>
-      <Menu />
-      <section className="w-full bg-product-section py-16 md:py-24">
+      <Header />
+      <section className="w-full mt-32 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-4 gap-4 md:gap-6">
             {/* Main hero card */}
