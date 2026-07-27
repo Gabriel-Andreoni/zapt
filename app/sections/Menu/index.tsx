@@ -41,7 +41,7 @@ export default function Header() {
             href="#contato"
             className="hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0554f2] shadow-sm transition-colors hover:bg-white/60 md:inline-flex"
           >
-            Fale conosco
+            Orçamento
           </a>
 
           {/* Mobile toggle */}
@@ -79,7 +79,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 rounded-full bg-white px-4 py-3 text-center text-sm font-semibold text-[#0554f2]"
               >
-                Fale conosco
+                Orçamento
               </Link>
             </nav>
           </div>
