@@ -4,7 +4,7 @@ import Header from "../Menu";
 const technologies = ["React", "TypeScript", "Next.js", "Node"];
 
 const cardBase =
-  "group relative min-w-0 overflow-hidden rounded-3xl border border-[#10182b17] p-[clamp(1.35rem,3vw,2rem)] shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-[#0554f238] hover:shadow-[0_24px_65px_rgba(16,24,43,0.13)] motion-reduce:transition-none";
+  "group relative min-w-0 overflow-hidden rounded-3xl border border-ink/10 p-[clamp(1.35rem,3vw,2rem)] shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-brand-primary/20 hover:shadow-[0_24px_65px_rgba(16,24,43,0.13)] motion-reduce:transition-none";
 
 const cardLabel =
   "font-mono text-[0.62rem] font-bold tracking-[0.12em] uppercase";
@@ -24,7 +24,7 @@ function CircuitBackground() {
           d="M-80 118H1018L214 602H1280"
           pathLength="100"
           fill="none"
-          stroke="rgba(5, 84, 242, 0.12)"
+          stroke="color-mix(in srgb, var(--zapt-brand-primary) 12%, transparent)"
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -35,7 +35,7 @@ function CircuitBackground() {
           d="M-80 118H1018L214 602H1280"
           pathLength="100"
           fill="none"
-          stroke="#0554f2"
+          stroke="var(--zapt-brand-primary)"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -51,8 +51,8 @@ function CircuitBackground() {
           />
         </path>
         <g
-          fill="#f6f9ff"
-          stroke="rgba(5, 84, 242, 0.42)"
+          fill="var(--zapt-surface-canvas)"
+          stroke="color-mix(in srgb, var(--zapt-brand-primary) 42%, transparent)"
           strokeWidth="2"
           vectorEffect="non-scaling-stroke"
         >
@@ -70,13 +70,13 @@ function CircuitBackground() {
 function PerformanceSignal() {
   return (
     <div
-      className="flex h-[3.8rem] w-[4.75rem] shrink-0 items-end gap-1 border-b border-[#10182b47] pb-1"
+      className="flex h-[3.8rem] w-[4.75rem] shrink-0 items-end gap-1 border-b border-ink/30 pb-1"
       aria-hidden="true"
     >
       {[42, 64, 52, 82, 70, 100].map((height, index) => (
         <span
           key={height}
-          className="h-full w-full origin-bottom animate-pulse rounded-t-full rounded-b-sm bg-[#10182b] motion-reduce:animate-none"
+          className="h-full w-full origin-bottom animate-pulse rounded-t-full rounded-b-sm bg-ink motion-reduce:animate-none"
           style={{
             height: `${height}%`,
             animationDelay: `${index * 120}ms`,
@@ -101,14 +101,14 @@ export default function Hero() {
 
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-2 md:gap-5 lg:gap-6">
               <article
-                className={`${cardBase} col-span-2 min-h-[clamp(31rem,72vh,36rem)] border-white/15 bg-[#0554f2] bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:row-span-2 md:min-h-[38rem] lg:p-[2.65rem]`}
+                className={`${cardBase} col-span-2 min-h-[clamp(31rem,72vh,36rem)] border-white/15 bg-brand-primary bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:row-span-2 md:min-h-[38rem] lg:p-[2.65rem]`}
               >
                 <div
                   className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.35)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.17] [mask-image:radial-gradient(circle_at_82%_22%,black,transparent_62%)]"
                   aria-hidden="true"
                 />
                 <div
-                  className="absolute -top-20 -right-16 aspect-square w-76 rounded-full bg-[#18a8e857] blur-[55px]"
+                  className="absolute -top-20 -right-16 aspect-square w-76 rounded-full bg-brand-secondary/35 blur-[55px]"
                   aria-hidden="true"
                 />
 
@@ -139,14 +139,14 @@ export default function Hero() {
                   <div className="flex flex-col items-stretch gap-3 min-[560px]:flex-row min-[560px]:flex-wrap min-[560px]:items-center">
                     <a
                       href="#produtos"
-                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#0554f2] shadow-[0_8px_24px_rgba(16,24,43,0.15)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#eef4ff] hover:shadow-[0_12px_30px_rgba(16,24,43,0.22)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#b9e532] motion-reduce:transition-none"
+                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_8px_24px_rgba(16,24,43,0.15)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-surface-soft hover:shadow-[0_12px_30px_rgba(16,24,43,0.22)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
                     >
                       Conheça nossas soluções
                       <ArrowRight size={17} />
                     </a>
                     <a
                       href="#contato"
-                      className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-white/15 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#b9e532] motion-reduce:transition-none"
+                      className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-white/15 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
                     >
                       Fale com a gente
                     </a>
@@ -162,13 +162,13 @@ export default function Hero() {
               </article>
 
               <article
-                className={`${cardBase} col-span-2 flex min-h-68 flex-col justify-between gap-5 bg-[radial-gradient(circle_at_92%_4%,rgba(5,84,242,0.12),transparent_10rem)] bg-white/90 text-[#10182b] backdrop-blur-sm md:min-h-0`}
+                className={`${cardBase} col-span-2 flex min-h-68 flex-col justify-between gap-5 bg-[radial-gradient(circle_at_92%_4%,rgba(5,84,242,0.12),transparent_10rem)] bg-white/90 text-ink backdrop-blur-sm md:min-h-0`}
               >
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-[#0554f2] text-white shadow-[0_10px_25px_rgba(5,84,242,0.22)]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.22)]">
                     <Code2 size={21} />
                   </span>
-                  <span className={`${cardLabel} text-[#0554f280]`}>
+                  <span className={`${cardLabel} text-brand-primary/50`}>
                     BUILD
                   </span>
                 </div>
@@ -177,7 +177,7 @@ export default function Hero() {
                   <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
                     Stack moderna
                   </h2>
-                  <p className="mt-2 max-w-lg text-sm leading-6 text-[#10182ba8]">
+                  <p className="mt-2 max-w-lg text-sm leading-6 text-ink/65">
                     Ferramentas atuais, escolhidas para dar velocidade,
                     segurança e espaço para crescer.
                   </p>
@@ -187,7 +187,7 @@ export default function Hero() {
                   {technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full border border-[#0554f21f] bg-[#edf3ff] px-3 py-1.5 text-xs font-bold text-[#0554f2]"
+                      className="rounded-full border border-brand-primary/15 bg-surface-soft px-3 py-1.5 text-xs font-bold text-brand-primary"
                     >
                       {tech}
                     </span>
@@ -196,21 +196,21 @@ export default function Hero() {
               </article>
 
               <article
-                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-[#e7f7ff] text-[#10182b] min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
+                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-surface-sky text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
               >
                 <div
-                  className="absolute top-15 -right-16 aspect-square w-48 rounded-full border border-[#18a8e840] before:absolute before:inset-8 before:rounded-full before:border before:border-[#18a8e83d] before:content-['']"
+                  className="absolute top-15 -right-16 aspect-square w-48 rounded-full border border-brand-secondary/25 before:absolute before:inset-8 before:rounded-full before:border before:border-brand-secondary/25 before:content-['']"
                   aria-hidden="true"
                 >
-                  <span className="absolute top-1/2 -left-1 size-2 rounded-full bg-[#18a8e8] shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
-                  <span className="absolute top-[14%] left-[46%] size-1.5 rounded-full bg-[#18a8e8] shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
+                  <span className="absolute top-1/2 -left-1 size-2 rounded-full bg-brand-secondary shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
+                  <span className="absolute top-[14%] left-[46%] size-1.5 rounded-full bg-brand-secondary shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
                 </div>
 
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl border border-[#18a8e82e] bg-white/70 text-[#087aaa]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl border border-brand-secondary/20 bg-white/70 text-brand-secondary-strong">
                     <Globe size={21} />
                   </span>
-                  <span className={`${cardLabel} text-[#0554f280]`}>
+                  <span className={`${cardLabel} text-brand-primary/50`}>
                     REACH
                   </span>
                 </div>
@@ -219,20 +219,20 @@ export default function Hero() {
                   <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
                     Presença digital
                   </h2>
-                  <p className="mt-2 text-sm leading-6 text-[#10182ba8]">
+                  <p className="mt-2 text-sm leading-6 text-ink/65">
                     Produtos que conectam sua marca ao mundo.
                   </p>
                 </div>
               </article>
 
               <article
-                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-[#b9e532] text-[#10182b] min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
+                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-brand-highlight text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
               >
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-[#10182b] text-[#b9e532]">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-brand-highlight">
                     <Zap size={21} fill="currentColor" />
                   </span>
-                  <span className={`${cardLabel} text-[#10182b7a]`}>
+                  <span className={`${cardLabel} text-ink/50`}>
                     SPEED
                   </span>
                 </div>
@@ -242,7 +242,7 @@ export default function Hero() {
                     <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
                       Performance
                     </h2>
-                    <p className="mt-2 text-sm leading-6 text-[#10182ba8]">
+                    <p className="mt-2 text-sm leading-6 text-ink/65">
                       Entregas rápidas e resultados mensuráveis.
                     </p>
                   </div>

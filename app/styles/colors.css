@@ -1,0 +1,15 @@
+:root {
+  /* Brand */
+  --zapt-brand-primary: #0554f2;
+  --zapt-brand-secondary: #18a8e8;
+  --zapt-brand-secondary-strong: #087aaa;
+  --zapt-brand-highlight: #b9e532;
+
+  /* Surfaces */
+  --zapt-surface-canvas: #f6f9ff;
+  --zapt-surface-sky: #e7f7ff;
+  --zapt-surface-soft: #edf3ff;
+
+  /* Content */
+  --zapt-ink: #10182b;
+}

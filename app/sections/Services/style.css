@@ -1,4 +1,0 @@
-@keyframes grow {
-  0%, 100% { transform: scaleY(0.6); transform-origin: bottom; }
-  50% { transform: scaleY(1); transform-origin: bottom; }
-}

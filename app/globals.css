@@ -1,5 +1,17 @@
 @import "tailwindcss";
+@import "./styles/colors.css";
+
+@theme inline {
+  --color-brand-primary: var(--zapt-brand-primary);
+  --color-brand-secondary: var(--zapt-brand-secondary);
+  --color-brand-secondary-strong: var(--zapt-brand-secondary-strong);
+  --color-brand-highlight: var(--zapt-brand-highlight);
+  --color-surface-canvas: var(--zapt-surface-canvas);
+  --color-surface-sky: var(--zapt-surface-sky);
+  --color-surface-soft: var(--zapt-surface-soft);
+  --color-ink: var(--zapt-ink);
+}
 
 body {
-  background: #fafafa;
+  background: var(--zapt-surface-canvas);
 }
