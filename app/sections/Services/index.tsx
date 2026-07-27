@@ -103,14 +103,14 @@ const toneStyles: Record<
 };
 
 const cardBase =
-  "group relative flex min-h-64 overflow-hidden rounded-3xl border p-6 shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(16,24,43,0.13)] motion-reduce:transition-none md:p-8";
+  "group relative flex min-h-64 overflow-hidden rounded-3xl border p-6 shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(16,24,43,0.13)] motion-reduce:transition-none md:p-8";
 
 function FeaturedPreview() {
   const barHeights = [40, 65, 50, 85, 70, 100];
 
   return (
     <div
-      className="pointer-events-none absolute -right-6 -bottom-7 w-[72%] max-w-90 -rotate-6 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-2 group-hover:-rotate-3 motion-reduce:transition-none"
+      className="pointer-events-none absolute -right-6 -bottom-7 w-[72%] max-w-90 -rotate-6 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:-translate-y-2 group-hover:-rotate-3 motion-reduce:transition-none"
       aria-hidden="true"
     >
       <div className="overflow-hidden rounded-2xl border border-white/25 bg-white/10 shadow-2xl backdrop-blur-md">
@@ -221,7 +221,7 @@ export function Services() {
                       className={`inline-flex items-center gap-2 text-sm font-bold ${tone.action}`}
                     >
                       Saiba mais
-                      <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none" />
+                      <ArrowRight className="size-4 transition-all duration-300 group-hover:translate-x-1 motion-reduce:transition-none" />
                     </span>
                   </div>
                 </div>
