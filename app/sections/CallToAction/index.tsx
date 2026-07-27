@@ -162,7 +162,7 @@ export function CallToAction() {
 
             <a
               href="#contato"
-              className="group/button mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_10px_28px_rgba(16,24,43,0.18)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-brand-highlight hover:text-ink hover:shadow-[0_14px_34px_rgba(16,24,43,0.25)] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight motion-reduce:transition-none"
+              className="group/button mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_10px_28px_rgba(16,24,43,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-highlight hover:text-ink hover:shadow-[0_14px_34px_rgba(16,24,43,0.25)] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight motion-reduce:transition-none"
             >
               Conversar sobre meu projeto
               <ArrowRight className="size-4 transition-transform duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none" />
