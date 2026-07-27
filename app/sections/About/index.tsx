@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 
 const cardBase =
-  "group relative min-w-0 overflow-hidden rounded-3xl border p-6 shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-[transform,box-shadow,border-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(16,24,43,0.13)] motion-reduce:transition-none md:p-8";
+  "group relative min-w-0 overflow-hidden rounded-3xl border p-6 shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1 hover:shadow-[0_26px_70px_rgba(16,24,43,0.13)] motion-reduce:transition-none md:p-8";
 
 const principles = [
   {
@@ -252,7 +252,7 @@ export function About() {
                 className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-highlight focus-visible:rounded-sm focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight"
               >
                 Converse com a Zapt
-                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1 motion-reduce:transition-none" />
+                <ArrowRight className="size-4 transition-all duration-300 group-hover:translate-x-1 motion-reduce:transition-none" />
               </a>
             </div>
           </article>
