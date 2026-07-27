@@ -4,7 +4,7 @@ import Header from "../Menu";
 const technologies = ["React", "TypeScript", "Next.js", "Node"];
 
 const cardBase =
-  "group relative min-w-0 overflow-hidden rounded-3xl border border-ink/10 p-[clamp(1.35rem,3vw,2rem)] shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-brand-primary/20 hover:shadow-[0_24px_65px_rgba(16,24,43,0.13)] motion-reduce:transition-none";
+  "group relative min-w-0 overflow-hidden rounded-3xl border border-ink/10 p-[clamp(1.35rem,3vw,2rem)] shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-all duration-200 hover:-translate-y-1 hover:border-brand-primary/20 hover:shadow-[0_24px_65px_rgba(16,24,43,0.13)] motion-reduce:transition-none";
 
 const cardLabel =
   "font-mono text-[0.62rem] font-bold tracking-[0.12em] uppercase";
@@ -79,14 +79,14 @@ export default function Hero() {
                   <div className="flex flex-col items-stretch gap-3 min-[560px]:flex-row min-[560px]:flex-wrap min-[560px]:items-center">
                     <a
                       href="#produtos"
-                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_8px_24px_rgba(16,24,43,0.15)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-surface-soft hover:shadow-[0_12px_30px_rgba(16,24,43,0.22)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
+                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_8px_24px_rgba(16,24,43,0.15)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-surface-soft hover:shadow-[0_12px_30px_rgba(16,24,43,0.22)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
                     >
                       Conheça nossas soluções
                       <ArrowRight size={17} />
                     </a>
                     <a
                       href="#contato"
-                      className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-white/15 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
+                      className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/15 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
                     >
                       Fale com a gente
                     </a>
