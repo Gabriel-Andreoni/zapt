@@ -3,9 +3,7 @@ import Link from "next/link";
 import { Menu, X, Zap } from "lucide-react";
 
 const navItems = [
-  { name: "Início", href: "#" },
   { name: "Serviços", href: "#produtos" },
-  { name: "Orçamento", href: "#" },
   { name: "Sobre", href: "#" },
   { name: "Contato", href: "#" },
 ];
