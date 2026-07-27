@@ -2,7 +2,7 @@
 
 import Hero from "./sections/Hero";
 import { About } from "./sections/About";
-import Orcamento from "./sections/Orcamento";
+import { CallToAction } from "./sections/CallToAction";
 import { Services } from "./sections/Services";
 import styles from "./background-grid.module.css";
 
@@ -20,7 +20,7 @@ export default function Home() {
       <Hero />
       <Services />
       <About />
-      <Orcamento />
+      <CallToAction />
     </div>
   );
 }
