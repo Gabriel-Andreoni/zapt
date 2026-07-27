@@ -9,64 +9,6 @@ const cardBase =
 const cardLabel =
   "font-mono text-[0.62rem] font-bold tracking-[0.12em] uppercase";
 
-function CircuitBackground() {
-  return (
-    <div
-      className="pointer-events-none absolute -inset-y-13 -right-[7vw] -left-[7vw] -z-10"
-      aria-hidden="true"
-    >
-      <svg
-        className="h-full w-full overflow-visible drop-shadow-[0_10px_30px_rgba(5,84,242,0.10)]"
-        viewBox="0 0 1200 720"
-        preserveAspectRatio="none"
-      >
-        <path
-          d="M-80 118H1018L214 602H1280"
-          pathLength="100"
-          fill="none"
-          stroke="color-mix(in srgb, var(--zapt-brand-primary) 12%, transparent)"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          vectorEffect="non-scaling-stroke"
-        />
-        <path
-          className="motion-reduce:hidden"
-          d="M-80 118H1018L214 602H1280"
-          pathLength="100"
-          fill="none"
-          stroke="var(--zapt-brand-primary)"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeDasharray="2 98"
-          vectorEffect="non-scaling-stroke"
-        >
-          <animate
-            attributeName="stroke-dashoffset"
-            from="0"
-            to="-100"
-            dur="8s"
-            repeatCount="indefinite"
-          />
-        </path>
-        <g
-          fill="var(--zapt-surface-canvas)"
-          stroke="color-mix(in srgb, var(--zapt-brand-primary) 42%, transparent)"
-          strokeWidth="2"
-          vectorEffect="non-scaling-stroke"
-        >
-          <circle cx="112" cy="118" r="7" />
-          <circle cx="1018" cy="118" r="9" />
-          <circle cx="690" cy="315" r="7" />
-          <circle cx="214" cy="602" r="9" />
-          <circle cx="1082" cy="602" r="7" />
-        </g>
-      </svg>
-    </div>
-  );
-}
-
 function PerformanceSignal() {
   return (
     <div
@@ -97,8 +39,6 @@ export default function Hero() {
       >
         <div className="mx-auto w-[calc(100%-2rem)] max-w-7xl sm:w-[calc(100%-3rem)]">
           <div className="relative">
-            <CircuitBackground />
-
             <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-2 md:gap-5 lg:gap-6">
               <article
                 className={`${cardBase} col-span-2 min-h-[clamp(31rem,72vh,36rem)] border-white/15 bg-brand-primary bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:row-span-2 md:min-h-[38rem] lg:p-[2.65rem]`}
@@ -232,9 +172,7 @@ export default function Hero() {
                   <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-brand-highlight">
                     <Zap size={21} fill="currentColor" />
                   </span>
-                  <span className={`${cardLabel} text-ink/50`}>
-                    SPEED
-                  </span>
+                  <span className={`${cardLabel} text-ink/50`}>SPEED</span>
                 </div>
 
                 <div className="relative z-10 flex items-end justify-between gap-4">

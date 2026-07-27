@@ -4,8 +4,8 @@ import { Menu, X, Zap } from "lucide-react";
 
 const navItems = [
   { name: "Serviços", href: "#produtos" },
-  { name: "Sobre", href: "#" },
-  { name: "Contato", href: "#" },
+  { name: "Sobre", href: "#sobre" },
+  { name: "Contato", href: "#contato" },
 ];
 
 export default function Header() {
