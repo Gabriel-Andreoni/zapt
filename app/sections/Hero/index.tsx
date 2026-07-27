@@ -1,141 +1,255 @@
 import { ArrowRight, Code2, Globe, Sparkles, Zap } from "lucide-react";
 import Header from "../Menu";
 
+const technologies = ["React", "TypeScript", "Next.js", "Node"];
+
+const cardBase =
+  "group relative min-w-0 overflow-hidden rounded-3xl border border-[#10182b17] p-[clamp(1.35rem,3vw,2rem)] shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-[#0554f238] hover:shadow-[0_24px_65px_rgba(16,24,43,0.13)] motion-reduce:transition-none";
+
+const cardLabel =
+  "font-mono text-[0.62rem] font-bold tracking-[0.12em] uppercase";
+
+function CircuitBackground() {
+  return (
+    <div
+      className="pointer-events-none absolute -inset-y-13 -right-[7vw] -left-[7vw] -z-10"
+      aria-hidden="true"
+    >
+      <svg
+        className="h-full w-full overflow-visible drop-shadow-[0_10px_30px_rgba(5,84,242,0.10)]"
+        viewBox="0 0 1200 720"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M-80 118H1018L214 602H1280"
+          pathLength="100"
+          fill="none"
+          stroke="rgba(5, 84, 242, 0.12)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          vectorEffect="non-scaling-stroke"
+        />
+        <path
+          className="motion-reduce:hidden"
+          d="M-80 118H1018L214 602H1280"
+          pathLength="100"
+          fill="none"
+          stroke="#0554f2"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray="2 98"
+          vectorEffect="non-scaling-stroke"
+        >
+          <animate
+            attributeName="stroke-dashoffset"
+            from="0"
+            to="-100"
+            dur="8s"
+            repeatCount="indefinite"
+          />
+        </path>
+        <g
+          fill="#f6f9ff"
+          stroke="rgba(5, 84, 242, 0.42)"
+          strokeWidth="2"
+          vectorEffect="non-scaling-stroke"
+        >
+          <circle cx="112" cy="118" r="7" />
+          <circle cx="1018" cy="118" r="9" />
+          <circle cx="690" cy="315" r="7" />
+          <circle cx="214" cy="602" r="9" />
+          <circle cx="1082" cy="602" r="7" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function PerformanceSignal() {
+  return (
+    <div
+      className="flex h-[3.8rem] w-[4.75rem] shrink-0 items-end gap-1 border-b border-[#10182b47] pb-1"
+      aria-hidden="true"
+    >
+      {[42, 64, 52, 82, 70, 100].map((height, index) => (
+        <span
+          key={height}
+          className="h-full w-full origin-bottom animate-pulse rounded-t-full rounded-b-sm bg-[#10182b] motion-reduce:animate-none"
+          style={{
+            height: `${height}%`,
+            animationDelay: `${index * 120}ms`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function Hero() {
   return (
     <>
       <Header />
-      <section className="w-full mt-32 py-16 md:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-4 gap-4 md:gap-6">
-            {/* Main hero card */}
-            <article className="group relative col-span-4 overflow-hidden rounded-2xl bg-[#0554f2] p-8 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#0554f270] md:col-span-2 md:row-span-2 md:rounded-3xl md:p-10 lg:p-12">
-              <div className="pointer-events-none absolute inset-0 overflow-hidden">
-                <div
-                  className="absolute inset-0 opacity-[0.12]"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(to right, #fafafa 1px, transparent 1px), linear-gradient(to bottom, #fafafa 1px, transparent 1px)",
-                    backgroundSize: "40px 40px",
-                    maskImage:
-                      "radial-gradient(ellipse at 70% 30%, black 20%, transparent 70%)",
-                  }}
-                />
-                <div className="absolute right-8 top-8 h-40 w-40 rounded-full bg-white/10 blur-3xl animate-pulse" />
-                <div
-                  className="absolute right-32 top-40 h-24 w-24 rounded-full bg-white/15 blur-2xl animate-pulse"
-                  style={{ animationDelay: "0.6s" }}
-                />
-              </div>
+      <section
+        className="relative isolate w-full overflow-hidden pt-[clamp(9.25rem,14vw,10.75rem)] pb-[clamp(4rem,8vw,7rem)] lg:pt-[11.25rem]"
+        aria-labelledby="hero-title"
+      >
+        <div className="mx-auto w-[calc(100%-2rem)] max-w-7xl sm:w-[calc(100%-3rem)]">
+          <div className="relative">
+            <CircuitBackground />
 
-              <div className="relative flex h-full flex-col justify-between">
-                <div>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm text-white font-medium ring-1 ring-white/10">
-                    <Sparkles className="h-4 w-4 text-white" />
-                    Olá, nós somos a Zapt.
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-2 md:gap-5 lg:gap-6">
+              <article
+                className={`${cardBase} col-span-2 min-h-[clamp(31rem,72vh,36rem)] border-white/15 bg-[#0554f2] bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:row-span-2 md:min-h-[38rem] lg:p-[2.65rem]`}
+              >
+                <div
+                  className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.35)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.17] [mask-image:radial-gradient(circle_at_82%_22%,black,transparent_62%)]"
+                  aria-hidden="true"
+                />
+                <div
+                  className="absolute -top-20 -right-16 aspect-square w-76 rounded-full bg-[#18a8e857] blur-[55px]"
+                  aria-hidden="true"
+                />
+
+                <div className="relative z-10 flex h-full flex-col justify-between gap-10">
+                  <div>
+                    <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs leading-none font-semibold text-white/90 backdrop-blur-sm">
+                      <Sparkles size={16} strokeWidth={2} />
+                      Olá, nós somos a Zapt.
+                    </span>
+
+                    <h1
+                      id="hero-title"
+                      className="mt-6 max-w-[12ch] text-[clamp(2.15rem,9vw,4.15rem)] leading-[0.98] font-semibold tracking-[-0.055em] text-balance text-white"
+                    >
+                      Transformamos ideias em{" "}
+                      <span className="text-white/55">
+                        experiências digitais
+                      </span>
+                    </h1>
+
+                    <p className="mt-5 max-w-xl text-[clamp(0.98rem,2vw,1.08rem)] leading-[1.65] text-white/75">
+                      Desenvolvemos sistemas web, aplicativos e soluções
+                      personalizadas com tecnologia moderna para destacar sua
+                      empresa.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col items-stretch gap-3 min-[560px]:flex-row min-[560px]:flex-wrap min-[560px]:items-center">
+                    <a
+                      href="#produtos"
+                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-[#0554f2] shadow-[0_8px_24px_rgba(16,24,43,0.15)] transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-[#eef4ff] hover:shadow-[0_12px_30px_rgba(16,24,43,0.22)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#b9e532] motion-reduce:transition-none"
+                    >
+                      Conheça nossas soluções
+                      <ArrowRight size={17} />
+                    </a>
+                    <a
+                      href="#contato"
+                      className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-[transform,background-color] duration-200 hover:-translate-y-0.5 hover:bg-white/15 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[#b9e532] motion-reduce:transition-none"
+                    >
+                      Fale com a gente
+                    </a>
+                  </div>
+                </div>
+
+                <span
+                  className={`${cardLabel} absolute right-6 bottom-6 hidden text-white/35 sm:block`}
+                  aria-hidden="true"
+                >
+                  ZAPT / DIGITAL
+                </span>
+              </article>
+
+              <article
+                className={`${cardBase} col-span-2 flex min-h-68 flex-col justify-between gap-5 bg-[radial-gradient(circle_at_92%_4%,rgba(5,84,242,0.12),transparent_10rem)] bg-white/90 text-[#10182b] backdrop-blur-sm md:min-h-0`}
+              >
+                <div className="relative z-10 flex items-center justify-between gap-4">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-[#0554f2] text-white shadow-[0_10px_25px_rgba(5,84,242,0.22)]">
+                    <Code2 size={21} />
                   </span>
-
-                  <h1 className="mt-6 text-3xl font-bold leading-[1.1] tracking-tight text-white md:text-4xl lg:text-5xl">
-                    Transformamos ideias em{" "}
-                    <span className="text-white/50">experiências digitais</span>
-                  </h1>
-
-                  <p className="mt-5 max-w-xl text-base leading-relaxed text-white/80 md:text-lg">
-                    Desenvolvemos sistemas web, aplicativos e soluções
-                    personalizadas com as tecnologias mais modernas do mercado
-                    para destacar sua empresa.
-                  </p>
+                  <span className={`${cardLabel} text-[#0554f280]`}>
+                    BUILD
+                  </span>
                 </div>
 
-                <div className="mt-8 flex flex-wrap items-center gap-3">
-                  <a
-                    href="#produtos"
-                    className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#0554f2] transition-colors hover:bg-white/60"
-                  >
-                    Conheça nossas soluções
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
-                  <a
-                    href="#contato"
-                    className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-semibold text-white ring-1 ring-white/20 transition-colors hover:bg-white/20"
-                  >
-                    Fale com a gente
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            {/* Tech stack card */}
-            <article className="group relative col-span-4 overflow-hidden rounded-2xl bg-[#0554f2] p-6 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#0554f270] md:col-span-2 md:rounded-3xl">
-              <div className="pointer-events-none absolute -right-6 -top-6 h-28 w-28 rounded-full bg-white/10 blur-2xl transition-opacity group-hover:opacity-100" />
-
-              <div className="relative flex h-full flex-col justify-between">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/10">
-                  <Code2 className="h-5 w-5 text-white" />
-                </div>
-
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold leading-tight md:text-xl">
+                <div>
+                  <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
                     Stack moderna
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/80">
-                    React, TypeScript, Next.js, Node e tudo que sua ideia
-                    precisa para ganhar vida na web.
+                  </h2>
+                  <p className="mt-2 max-w-lg text-sm leading-6 text-[#10182ba8]">
+                    Ferramentas atuais, escolhidas para dar velocidade,
+                    segurança e espaço para crescer.
                   </p>
                 </div>
 
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {["React", "TypeScript", "Next.js", "Node"].map((tech) => (
+                <div className="flex flex-wrap gap-2" aria-label="Tecnologias">
+                  {technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-white ring-1 ring-[#0554f270]"
+                      className="rounded-full border border-[#0554f21f] bg-[#edf3ff] px-3 py-1.5 text-xs font-bold text-[#0554f2]"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
-              </div>
-            </article>
+              </article>
 
-            {/* Presence card */}
-            <article className="group relative col-span-2 overflow-hidden rounded-2xl bg-[#0554f2] p-6 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#0554f270] md:rounded-3xl">
-              <div className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full bg-white/10 blur-xl transition-opacity group-hover:opacity-100" />
-
-              <div className="relative flex h-full flex-col justify-between">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/10">
-                  <Globe className="h-5 w-5 text-white" />
+              <article
+                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-[#e7f7ff] text-[#10182b] min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
+              >
+                <div
+                  className="absolute top-15 -right-16 aspect-square w-48 rounded-full border border-[#18a8e840] before:absolute before:inset-8 before:rounded-full before:border before:border-[#18a8e83d] before:content-['']"
+                  aria-hidden="true"
+                >
+                  <span className="absolute top-1/2 -left-1 size-2 rounded-full bg-[#18a8e8] shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
+                  <span className="absolute top-[14%] left-[46%] size-1.5 rounded-full bg-[#18a8e8] shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
                 </div>
 
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-white leading-tight md:text-xl">
+                <div className="relative z-10 flex items-center justify-between gap-4">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl border border-[#18a8e82e] bg-white/70 text-[#087aaa]">
+                    <Globe size={21} />
+                  </span>
+                  <span className={`${cardLabel} text-[#0554f280]`}>
+                    REACH
+                  </span>
+                </div>
+
+                <div className="relative z-10">
+                  <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
                     Presença digital
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/80">
-                    Sites, apps e sistemas que conectam sua marca ao mundo.
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-[#10182ba8]">
+                    Produtos que conectam sua marca ao mundo.
                   </p>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            {/* Speed card */}
-            <article className="group relative col-span-2 overflow-hidden rounded-2xl bg-[#0554f2] p-6 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#0554f270] md:rounded-3xl">
-              <div className="pointer-events-none absolute -right-4 -top-4 h-20 w-20 rounded-full bg-white/10 blur-xl transition-opacity group-hover:opacity-100" />
-
-              <div className="relative flex h-full flex-col justify-between">
-                <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/10">
-                  <Zap className="h-5 w-5 text-white" />
+              <article
+                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-[#b9e532] text-[#10182b] min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
+              >
+                <div className="relative z-10 flex items-center justify-between gap-4">
+                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-[#10182b] text-[#b9e532]">
+                    <Zap size={21} fill="currentColor" />
+                  </span>
+                  <span className={`${cardLabel} text-[#10182b7a]`}>
+                    SPEED
+                  </span>
                 </div>
 
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold leading-tight text-white md:text-xl">
-                    Performance
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-white/80">
-                    Entrega rápida, código limpo e resultados mensuráveis.
-                  </p>
+                <div className="relative z-10 flex items-end justify-between gap-4">
+                  <div>
+                    <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
+                      Performance
+                    </h2>
+                    <p className="mt-2 text-sm leading-6 text-[#10182ba8]">
+                      Entregas rápidas e resultados mensuráveis.
+                    </p>
+                  </div>
+                  <PerformanceSignal />
                 </div>
-              </div>
-            </article>
+              </article>
+            </div>
           </div>
         </div>
       </section>
