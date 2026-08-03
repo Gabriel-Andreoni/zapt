@@ -3,6 +3,7 @@
 import Hero from "./sections/Hero";
 import { About } from "./sections/About";
 import { CallToAction } from "./sections/CallToAction";
+import { Footer } from "./sections/Footer";
 import { Services } from "./sections/Services";
 import styles from "./background-grid.module.css";
 
@@ -21,6 +22,7 @@ export default function Home() {
       <Services />
       <About />
       <CallToAction />
+      <Footer />
     </div>
   );
 }
