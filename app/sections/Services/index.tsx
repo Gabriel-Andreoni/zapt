@@ -174,7 +174,9 @@ export function Services() {
               <article
                 key={product.id}
                 className={`${cardBase} ${tone.card} ${product.span} ${
-                  isFeatured ? "min-h-[34rem]" : ""
+                  isFeatured
+                    ? "min-h-[30rem] sm:min-h-[32rem] xl:min-h-[34rem]"
+                    : ""
                 }`}
               >
                 <div

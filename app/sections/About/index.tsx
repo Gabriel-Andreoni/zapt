@@ -66,7 +66,7 @@ export function About() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-12 lg:auto-rows-[minmax(14rem,auto)]">
           <article
-            className={`${cardBase} flex min-h-[38rem] flex-col border-white/15 bg-brand-primary text-white shadow-[0_26px_70px_rgba(5,84,242,0.22)] md:col-span-2 lg:col-span-7 lg:row-span-2 lg:min-h-0`}
+            className={`${cardBase} flex flex-col border-white/15 bg-brand-primary text-white shadow-[0_26px_70px_rgba(5,84,242,0.22)] md:col-span-2 md:min-h-[38rem] lg:col-span-7 lg:row-span-2 lg:min-h-0`}
           >
             <div
               className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.26)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.26)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.13] [mask-image:radial-gradient(circle_at_90%_5%,black,transparent_68%)]"
@@ -125,7 +125,7 @@ export function About() {
           </article>
 
           <article
-            className={`${cardBase} flex min-h-72 flex-col border-ink/10 bg-white/90 text-ink backdrop-blur-sm md:min-h-80 lg:col-span-5 lg:min-h-0`}
+            className={`${cardBase} flex flex-col border-ink/10 bg-white/90 text-ink backdrop-blur-sm md:min-h-80 lg:col-span-5 lg:min-h-0`}
           >
             <div className="flex items-start justify-between gap-4">
               <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.20)]">
@@ -149,7 +149,7 @@ export function About() {
           </article>
 
           <article
-            className={`${cardBase} flex min-h-72 flex-col border-brand-secondary/15 bg-surface-sky text-ink md:min-h-80 lg:col-span-5 lg:min-h-0`}
+            className={`${cardBase} flex flex-col border-brand-secondary/15 bg-surface-sky text-ink md:min-h-80 lg:col-span-5 lg:min-h-0`}
           >
             <div
               className="pointer-events-none absolute -top-20 -right-16 size-56 rounded-full border border-brand-secondary/15 before:absolute before:inset-8 before:rounded-full before:border before:border-brand-secondary/15 before:content-['']"
@@ -181,7 +181,7 @@ export function About() {
           </article>
 
           <article
-            className={`${cardBase} flex min-h-64 flex-col border-ink/10 bg-brand-highlight text-ink md:min-h-72 lg:col-span-4 lg:min-h-0`}
+            className={`${cardBase} flex flex-col border-ink/10 bg-brand-highlight text-ink md:min-h-72 lg:col-span-4 lg:min-h-0`}
           >
             <div className="flex items-center justify-between gap-4">
               <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-ink text-brand-highlight">
@@ -191,7 +191,7 @@ export function About() {
                 Sob medida
               </span>
             </div>
-            <div className="mt-auto pt-8">
+            <div className="mt-auto pt-6 md:pt-8">
               <h3 className="text-xl font-bold tracking-[-0.025em]">
                 Só o que gera valor
               </h3>
@@ -203,7 +203,7 @@ export function About() {
           </article>
 
           <article
-            className={`${cardBase} flex min-h-64 flex-col border-ink/10 bg-white/90 text-ink backdrop-blur-sm md:min-h-72 lg:col-span-4 lg:min-h-0`}
+            className={`${cardBase} flex flex-col border-ink/10 bg-white/90 text-ink backdrop-blur-sm md:min-h-72 lg:col-span-4 lg:min-h-0`}
           >
             <div className="flex items-center justify-between gap-4">
               <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-surface-soft text-brand-primary ring-1 ring-brand-primary/10">
@@ -213,7 +213,7 @@ export function About() {
                 Evolução
               </span>
             </div>
-            <div className="mt-auto pt-8">
+            <div className="mt-auto pt-6 md:pt-8">
               <h3 className="text-xl font-bold tracking-[-0.025em]">
                 Feito para continuar
               </h3>
@@ -225,7 +225,7 @@ export function About() {
           </article>
 
           <article
-            className={`${cardBase} flex min-h-64 flex-col border-white/15 bg-ink text-white md:min-h-72 lg:col-span-4 lg:min-h-0`}
+            className={`${cardBase} flex flex-col border-white/15 bg-ink text-white md:min-h-72 lg:col-span-4 lg:min-h-0`}
           >
             <div
               className="pointer-events-none absolute -right-16 -bottom-24 size-60 rounded-full bg-brand-primary/35 blur-3xl"
@@ -239,7 +239,7 @@ export function About() {
                 Parceria
               </span>
             </div>
-            <div className="relative z-10 mt-auto pt-8">
+            <div className="relative z-10 mt-auto pt-6 md:pt-8">
               <h3 className="text-xl font-bold tracking-[-0.025em]">
                 Presença depois da entrega
               </h3>

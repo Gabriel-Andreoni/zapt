@@ -101,7 +101,7 @@ function ProductConstellation() {
           </span>
           <span className="size-2 rounded-full bg-brand-highlight" />
         </div>
-        <p className="mt-8 text-2xl leading-none font-bold tracking-[-0.06em] sm:text-3xl">
+        <p className="mt-8 text-base leading-none font-bold tracking-[-0.06em] min-[360px]:text-2xl sm:text-3xl">
           feito para
           <span className="block text-brand-highlight">funcionar.</span>
         </p>
