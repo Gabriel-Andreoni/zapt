@@ -1,4 +1,5 @@
-import { ArrowUpRight, MessageCircle, Zap } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, MessageCircle } from "lucide-react";
 
 const footerLinks = [
   { name: "Serviços", href: "#produtos" },
@@ -98,8 +99,14 @@ export function Footer() {
               className="group inline-flex w-fit items-center gap-2.5 font-bold text-white focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c7f33f]"
               aria-label="Voltar ao início"
             >
-              <span className="inline-flex size-9 items-center justify-center rounded-xl border border-white/15 bg-white/10 text-[#c7f33f] transition-colors group-hover:bg-white/15">
-                <Zap className="size-5" aria-hidden="true" />
+              <span className="inline-flex size-10 items-center justify-center rounded-xl bg-white p-1.5 shadow-sm transition-transform group-hover:-rotate-3 group-hover:scale-105">
+                <Image
+                  src="/logo.png"
+                  alt=""
+                  width={120}
+                  height={180}
+                  className="h-full w-auto"
+                />
               </span>
               Zapt
             </a>

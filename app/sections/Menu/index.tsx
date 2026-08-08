@@ -1,6 +1,7 @@
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "Serviços", href: "#produtos" },
@@ -16,8 +17,15 @@ export default function Header() {
       <div className="mx-auto mt-8 max-w-7xl">
         <div className="flex items-center justify-between rounded-2xl border border-white/20 bg-[#0554f2e8] px-5 py-3 shadow-lg shadow-[#0554f2b2] backdrop-blur-xl md:rounded-3xl md:px-6 md:py-4">
           <Link href="/" className="group flex items-center gap-2.5 text-white">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/10 transition-colors group-hover:bg-white/20">
-              <Zap className="h-5 w-5 text-white" />
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white p-1.5 shadow-sm ring-1 ring-white/30 transition-transform group-hover:-rotate-3 group-hover:scale-105">
+              <Image
+                src="/logo.png"
+                alt=""
+                width={120}
+                height={180}
+                className="h-full w-auto"
+                priority
+              />
             </span>
             <span className="text-lg font-bold tracking-tight">Zapt</span>
           </Link>
