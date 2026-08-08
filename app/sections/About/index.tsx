@@ -37,7 +37,7 @@ export function About() {
   return (
     <section
       id="sobre"
-      className="relative w-full scroll-mt-32 py-16 md:py-24"
+      className="relative w-full scroll-mt-32 pt-8 pb-16 md:pt-12 md:pb-20 lg:pt-16 lg:pb-24"
       aria-labelledby="about-title"
     >
       <div

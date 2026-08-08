@@ -34,7 +34,7 @@ export default function Hero() {
     <>
       <Header />
       <section
-        className="relative isolate w-full overflow-hidden pt-[clamp(9.25rem,14vw,10.75rem)] pb-[clamp(4rem,8vw,7rem)] lg:pt-[11.25rem]"
+        className="relative isolate w-full overflow-hidden pt-[clamp(9.25rem,14vw,10.75rem)] pb-8 md:pb-12 lg:pt-[11.25rem] lg:pb-16"
         aria-labelledby="hero-title"
       >
         <div className="mx-auto w-[calc(100%-2rem)] max-w-7xl sm:w-[calc(100%-3rem)]">
