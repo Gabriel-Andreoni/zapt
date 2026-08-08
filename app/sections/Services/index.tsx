@@ -27,7 +27,7 @@ const products: Product[] = [
     description:
       "Páginas otimizadas para transformar visitantes em clientes, com design estratégico, copy direcionada e performance superior.",
     icon: Rocket,
-    span: "col-span-4 md:col-span-2 md:row-span-2",
+    span: "col-span-1 sm:col-span-2 xl:col-span-2 xl:row-span-2",
     tone: "primary",
   },
   {
@@ -36,7 +36,7 @@ const products: Product[] = [
     description:
       "Soluções web sob medida com arquitetura moderna, escalável e experiência fluida para seus usuários.",
     icon: Code2,
-    span: "col-span-4 md:col-span-2",
+    span: "col-span-1 sm:col-span-2 xl:col-span-2",
     tone: "paper",
   },
   {
@@ -46,7 +46,7 @@ const products: Product[] = [
     description:
       "Automatize processos e centralize dados com sistemas feitos sob medida para o seu negócio.",
     icon: Database,
-    span: "col-span-4 min-[560px]:col-span-2 md:col-span-1",
+    span: "col-span-1",
     tone: "sky",
   },
   {
@@ -56,7 +56,7 @@ const products: Product[] = [
     description:
       "Atualize sua stack legada, melhore performance e aplique as melhores práticas de engenharia de software.",
     icon: RefreshCw,
-    span: "col-span-4 min-[560px]:col-span-2 md:col-span-1",
+    span: "col-span-1",
     tone: "highlight",
   },
 ];
@@ -165,7 +165,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-4 gap-4 md:auto-rows-[minmax(16rem,auto)] md:gap-6">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:grid-cols-4 xl:auto-rows-[minmax(16rem,auto)]">
           {products.map((product) => {
             const tone = toneStyles[product.tone];
             const isFeatured = product.tone === "primary";

@@ -39,9 +39,9 @@ export default function Hero() {
       >
         <div className="mx-auto w-[calc(100%-2rem)] max-w-7xl sm:w-[calc(100%-3rem)]">
           <div className="relative">
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:grid-rows-2 md:gap-5 lg:gap-6">
+            <div className="grid grid-cols-2 gap-4 md:gap-5 lg:gap-6 xl:grid-cols-4 xl:grid-rows-2">
               <article
-                className={`${cardBase} col-span-2 min-h-[clamp(31rem,72vh,36rem)] border-white/15 bg-brand-primary bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:row-span-2 md:min-h-[38rem] lg:p-[2.65rem]`}
+                className={`${cardBase} col-span-2 min-h-[clamp(31rem,72vh,36rem)] border-white/15 bg-brand-primary bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:min-h-[32rem] lg:p-[2.65rem] xl:row-span-2 xl:min-h-[38rem]`}
               >
                 <div
                   className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.35)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.17] [mask-image:radial-gradient(circle_at_82%_22%,black,transparent_62%)]"
@@ -102,7 +102,7 @@ export default function Hero() {
               </article>
 
               <article
-                className={`${cardBase} col-span-2 flex min-h-68 flex-col justify-between gap-5 bg-[radial-gradient(circle_at_92%_4%,rgba(5,84,242,0.12),transparent_10rem)] bg-white/90 text-ink backdrop-blur-sm md:min-h-0`}
+                className={`${cardBase} col-span-2 flex min-h-68 flex-col justify-between gap-5 bg-[radial-gradient(circle_at_92%_4%,rgba(5,84,242,0.12),transparent_10rem)] bg-white/90 text-ink backdrop-blur-sm xl:min-h-0`}
               >
                 <div className="relative z-10 flex items-center justify-between gap-4">
                   <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.22)]">
@@ -136,7 +136,7 @@ export default function Hero() {
               </article>
 
               <article
-                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-surface-sky text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
+                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-surface-sky text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 xl:min-h-0`}
               >
                 <div
                   className="absolute top-15 -right-16 aspect-square w-48 rounded-full border border-brand-secondary/25 before:absolute before:inset-8 before:rounded-full before:border before:border-brand-secondary/25 before:content-['']"
@@ -166,7 +166,7 @@ export default function Hero() {
               </article>
 
               <article
-                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-brand-highlight text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 md:min-h-0`}
+                className={`${cardBase} col-span-2 flex min-h-54 flex-col justify-between bg-brand-highlight text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 xl:min-h-0`}
               >
                 <div className="relative z-10 flex items-center justify-between gap-4">
                   <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-brand-highlight">
