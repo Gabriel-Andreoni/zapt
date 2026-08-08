@@ -64,12 +64,12 @@ export default function Hero() {
                       className="mt-6 max-w-[12ch] text-[clamp(1.9rem,9vw,4.15rem)] leading-[0.98] font-semibold tracking-[-0.055em] text-balance text-white"
                     >
                       Transformamos ideias em{" "}
-                      <span className="text-white/55">
+                      <span className="text-white/70">
                         experiências digitais
                       </span>
                     </h1>
 
-                    <p className="mt-5 max-w-xl text-[clamp(0.98rem,2vw,1.08rem)] leading-[1.65] text-white/75">
+                    <p className="mt-5 max-w-xl text-[clamp(0.98rem,2vw,1.08rem)] leading-[1.65] text-white/85">
                       Desenvolvemos sistemas web, aplicativos e soluções
                       personalizadas com tecnologia moderna para destacar sua
                       empresa.

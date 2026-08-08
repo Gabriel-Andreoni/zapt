@@ -82,7 +82,7 @@ export function About() {
                 <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/10 text-white ring-1 ring-white/20">
                   <ScanSearch className="size-6" />
                 </span>
-                <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/45 uppercase">
+                <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/85 uppercase">
                   Nosso método
                 </span>
               </div>
@@ -94,7 +94,7 @@ export function About() {
                 <h3 className="mt-3 text-3xl leading-[1.05] font-semibold tracking-[-0.045em] text-balance md:text-4xl">
                   Antes de escrever código, entendemos o que precisa mudar.
                 </h3>
-                <p className="mt-4 max-w-xl text-base leading-7 text-white/70">
+                <p className="mt-4 max-w-xl text-base leading-7 text-white/85">
                   Traduzimos desafios reais em uma solução digital útil,
                   viável e simples de manter. Assim, a tecnologia serve ao
                   crescimento — e não o contrário.
@@ -115,7 +115,7 @@ export function About() {
                         {principle.title}
                       </h4>
                     </div>
-                    <p className="mt-3 text-sm leading-6 text-white/60">
+                    <p className="mt-3 text-sm leading-6 text-white/85">
                       {principle.description}
                     </p>
                   </li>
@@ -235,7 +235,7 @@ export function About() {
               <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-white/10 text-brand-highlight ring-1 ring-white/10">
                 <HeartHandshake className="size-5" />
               </span>
-              <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/35 uppercase">
+              <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/50 uppercase">
                 Parceria
               </span>
             </div>

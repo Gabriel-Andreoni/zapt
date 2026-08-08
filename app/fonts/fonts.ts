@@ -1,6 +1,7 @@
-import { Black_Ops_One, Space_Grotesk } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 
 export const spaceGrotesk = Space_Grotesk({
-    subsets: ["latin"],
-    weight: ["400"]
-})
+  subsets: ["latin"],
+  weight: "variable",
+  display: "swap",
+});

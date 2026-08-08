@@ -74,8 +74,8 @@ const toneStyles: Record<
   primary: {
     card: "border-white/15 bg-brand-primary text-white shadow-[0_24px_65px_rgba(5,84,242,0.20)]",
     icon: "bg-white/10 text-white ring-white/20",
-    subtitle: "text-white/55",
-    description: "text-white/75",
+    subtitle: "text-white/70",
+    description: "text-white/85",
     action: "text-white",
   },
   paper: {

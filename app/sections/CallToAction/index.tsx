@@ -153,10 +153,10 @@ export function CallToAction() {
               className="mt-6 max-w-[11ch] text-[clamp(2.25rem,5vw,4rem)] leading-[0.98] font-semibold tracking-[-0.055em] text-balance"
             >
               Sua ideia pode começar a{" "}
-              <span className="text-white/55">tomar forma hoje.</span>
+              <span className="text-white/70">tomar forma hoje.</span>
             </h2>
 
-            <p className="mt-5 max-w-lg text-base leading-7 text-white/70 md:text-lg">
+            <p className="mt-5 max-w-lg text-base leading-7 text-white/85 md:text-lg">
               Conte o que sua empresa precisa. A Zapt organiza o caminho,
               constrói a solução e acompanha cada evolução.
             </p>
@@ -169,7 +169,7 @@ export function CallToAction() {
               <ArrowRight className="size-4 transition-transform duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none" />
             </a>
 
-            <p className="mt-4 flex items-center gap-2 text-sm text-white/55">
+            <p className="mt-4 flex items-center gap-2 text-sm text-white/85">
               <Check className="size-4 text-brand-highlight" strokeWidth={2.5} />
               Uma conversa direta, sem compromisso.
             </p>

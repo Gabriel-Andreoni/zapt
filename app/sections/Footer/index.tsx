@@ -70,7 +70,7 @@ export function Footer() {
             </div>
 
             <div className="rounded-[1.4rem] border border-white/15 bg-white/[0.08] p-4 shadow-[0_22px_50px_rgba(6,31,99,0.18)] backdrop-blur-xl sm:p-6 lg:col-span-4 lg:col-start-9">
-              <p className="font-mono text-[0.62rem] font-bold tracking-[0.16em] text-white/45 uppercase">
+              <p className="font-mono text-[0.62rem] font-bold tracking-[0.16em] text-white/65 uppercase">
                 Navegue
               </p>
 
@@ -93,7 +93,7 @@ export function Footer() {
           </div>
 
           <div className="border-t border-white/13">
-            <div className="mx-auto grid w-full max-w-7xl grid-cols-2 items-center gap-4 px-6 py-5 text-sm text-white/50 sm:px-10 sm:py-6 lg:grid-cols-[1fr_auto_1fr] lg:px-14 xl:px-16">
+            <div className="mx-auto grid w-full max-w-7xl grid-cols-2 items-center gap-4 px-6 py-5 text-sm text-white/65 sm:px-10 sm:py-6 lg:grid-cols-[1fr_auto_1fr] lg:px-14 xl:px-16">
             <a
               href="#"
               className="group inline-flex w-fit items-center gap-2.5 font-bold text-white focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c7f33f]"
