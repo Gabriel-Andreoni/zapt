@@ -144,7 +144,7 @@ export function Services() {
   return (
     <section
       id="produtos"
-      className="w-full py-16 md:py-24"
+      className="w-full scroll-mt-32 py-16 md:py-24"
       aria-labelledby="services-title"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

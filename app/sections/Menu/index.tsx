@@ -70,7 +70,7 @@ export default function Header() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="mt-3 rounded-2xl border border-white/10 p-3 shadow-xl shadow-[#0554f2] backdrop-blur-xl md:hidden">
+          <div className="mt-3 rounded-2xl border border-white/15 bg-brand-primary/95 p-3 shadow-xl shadow-brand-primary/25 backdrop-blur-xl md:hidden">
             <nav className="flex flex-col gap-1">
               {navItems.map((item) => (
                 <a

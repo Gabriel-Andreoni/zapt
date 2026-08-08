@@ -124,7 +124,7 @@ export function CallToAction() {
   return (
     <section
       id="contato"
-      className="w-full pb-12 md:pb-16"
+      className="w-full scroll-mt-32 pb-12 md:pb-16"
       aria-labelledby="cta-title"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
