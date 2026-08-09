@@ -19,7 +19,7 @@ export function Footer() {
     >
       <div className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_76%_16%,rgba(199,243,63,0.30),transparent_24%),radial-gradient(circle_at_12%_82%,rgba(24,168,232,0.38),transparent_35%),linear-gradient(136deg,#061f63_0%,#063db8_48%,#052777_100%)] text-white shadow-[0_30px_80px_rgba(6,31,99,0.28)]">
           <div
-            className="pointer-events-none absolute inset-0 -z-30 bg-[linear-gradient(rgba(255,255,255,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.10)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:linear-gradient(to_bottom,black,transparent_82%)]"
+            className="pointer-events-none absolute inset-0 -z-30 bg-[linear-gradient(rgba(255,255,255,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.10)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:linear-gradient(to_bottom,black,transparent_82%)]"
             aria-hidden="true"
           />
 
