@@ -148,11 +148,11 @@ export function Services() {
       aria-labelledby="services-title"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 md:mb-14">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-primary/10 bg-brand-primary/10 px-3 py-1.5 text-sm font-semibold text-brand-primary">
-            <Zap className="size-4" />
+        <header className="mb-10 md:mb-14">
+          <p className="inline-flex items-center gap-2 rounded-full border border-brand-primary/10 bg-brand-primary/10 px-3 py-1.5 text-sm font-semibold text-brand-primary">
+            <Zap className="size-4" aria-hidden="true" />
             Nossas soluções
-          </span>
+          </p>
           <h2
             id="services-title"
             className="mt-4 max-w-3xl text-3xl font-bold tracking-[-0.04em] text-ink md:text-4xl lg:text-5xl"
@@ -163,21 +163,26 @@ export function Services() {
             Do primeiro clique à operação completa: tecnologia sob medida para
             cada etapa do seu crescimento.
           </p>
-        </div>
+        </header>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:grid-cols-4 xl:auto-rows-[minmax(16rem,auto)]">
+        <ul
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 xl:grid-cols-4 xl:auto-rows-[minmax(16rem,auto)]"
+          aria-label="Soluções oferecidas pela Zapt"
+          role="list"
+        >
           {products.map((product) => {
             const tone = toneStyles[product.tone];
             const isFeatured = product.tone === "primary";
 
             return (
-              <article
+              <li
                 key={product.id}
                 className={`${cardBase} ${tone.card} ${product.span} ${
                   isFeatured
                     ? "min-h-[30rem] sm:min-h-[32rem] xl:min-h-[34rem]"
                     : ""
                 }`}
+                aria-labelledby={`${product.id}-title`}
               >
                 <div
                   className="pointer-events-none absolute -top-16 -right-16 size-48 rounded-full bg-current opacity-[0.06] blur-3xl"
@@ -197,11 +202,15 @@ export function Services() {
                 <div className="relative z-10 flex h-full w-full flex-col">
                   <span
                     className={`mb-5 inline-flex size-12 items-center justify-center rounded-2xl ring-1 ${tone.icon}`}
+                    aria-hidden="true"
                   >
                     <product.icon className="size-6" />
                   </span>
 
-                  <h3 className="max-w-xl text-xl leading-tight font-bold tracking-[-0.025em] md:text-2xl">
+                  <h3
+                    id={`${product.id}-title`}
+                    className="max-w-xl text-xl leading-tight font-bold tracking-[-0.025em] md:text-2xl"
+                  >
                     {product.title}
                     {product.subtitle && (
                       <span className={`block ${tone.subtitle}`}>
@@ -219,18 +228,21 @@ export function Services() {
                   </p>
 
                   <div className="mt-auto pt-8">
-                    <span
+                    <p
                       className={`inline-flex items-center gap-2 text-sm font-bold ${tone.action}`}
                     >
                       Saiba mais
-                      <ArrowRight className="size-4 transition-all duration-300 group-hover:translate-x-1 motion-reduce:transition-none" />
-                    </span>
+                      <ArrowRight
+                        className="size-4 transition-all duration-300 group-hover:translate-x-1 motion-reduce:transition-none"
+                        aria-hidden="true"
+                      />
+                    </p>
                   </div>
                 </div>
-              </article>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
     </section>
   );
