@@ -126,6 +126,7 @@ export function CallToAction() {
       id="contato"
       className="w-full scroll-mt-32 pb-12 md:pb-16"
       aria-labelledby="cta-title"
+      aria-describedby="cta-description"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="group relative isolate grid min-h-[38rem] overflow-hidden rounded-[2rem] border border-white/15 bg-brand-primary text-white shadow-[0_30px_85px_rgba(5,84,242,0.25)] lg:min-h-[34rem] lg:grid-cols-12">
@@ -142,11 +143,14 @@ export function CallToAction() {
             aria-hidden="true"
           />
 
-          <div className="relative z-10 flex flex-col items-start justify-center px-6 pt-10 pb-8 sm:px-10 sm:pt-12 lg:col-span-5 lg:p-14 xl:p-16">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm">
-              <Sparkles className="size-4 text-brand-highlight" />
+          <header className="relative z-10 flex flex-col items-start justify-center px-6 pt-10 pb-8 sm:px-10 sm:pt-12 lg:col-span-5 lg:p-14 xl:p-16">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs font-semibold text-white/90 backdrop-blur-sm">
+              <Sparkles
+                className="size-4 text-brand-highlight"
+                aria-hidden="true"
+              />
               Seu próximo produto digital
-            </span>
+            </p>
 
             <h2
               id="cta-title"
@@ -156,7 +160,10 @@ export function CallToAction() {
               <span className="text-white/70">tomar forma hoje.</span>
             </h2>
 
-            <p className="mt-5 max-w-lg text-base leading-7 text-white/85 md:text-lg">
+            <p
+              id="cta-description"
+              className="mt-5 max-w-lg text-base leading-7 text-white/85 md:text-lg"
+            >
               Conte o que sua empresa precisa. A Zapt organiza o caminho,
               constrói a solução e acompanha cada evolução.
             </p>
@@ -166,14 +173,21 @@ export function CallToAction() {
               className="group/button mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_10px_28px_rgba(16,24,43,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-highlight hover:text-ink hover:shadow-[0_14px_34px_rgba(16,24,43,0.25)] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight motion-reduce:transition-none"
             >
               Conversar sobre meu projeto
-              <ArrowRight className="size-4 transition-transform duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none" />
+              <ArrowRight
+                className="size-4 transition-transform duration-300 group-hover/button:translate-x-1 motion-reduce:transition-none"
+                aria-hidden="true"
+              />
             </a>
 
             <p className="mt-4 flex items-center gap-2 text-sm text-white/85">
-              <Check className="size-4 text-brand-highlight" strokeWidth={2.5} />
+              <Check
+                className="size-4 text-brand-highlight"
+                strokeWidth={2.5}
+                aria-hidden="true"
+              />
               Uma conversa direta, sem compromisso.
             </p>
-          </div>
+          </header>
 
           <div className="relative z-10 overflow-hidden px-5 pb-8 sm:px-10 sm:pb-10 lg:col-span-7 lg:overflow-visible lg:px-0 lg:py-10 lg:pr-8">
             <ProductConstellation />
