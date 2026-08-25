@@ -16,6 +16,7 @@ export function Footer() {
     <footer
       className="w-full"
       aria-labelledby="footer-title"
+      aria-describedby="footer-description"
     >
       <div className="relative isolate overflow-hidden bg-[radial-gradient(circle_at_76%_16%,rgba(199,243,63,0.30),transparent_24%),radial-gradient(circle_at_12%_82%,rgba(24,168,232,0.38),transparent_35%),linear-gradient(136deg,#061f63_0%,#063db8_48%,#052777_100%)] text-white shadow-[0_30px_80px_rgba(6,31,99,0.28)]">
           <div
@@ -34,7 +35,10 @@ export function Footer() {
           <div className="relative mx-auto grid w-full max-w-7xl gap-8 px-6 pt-12 pb-8 sm:gap-12 sm:px-10 sm:pt-16 sm:pb-10 lg:min-h-[33rem] lg:grid-cols-12 lg:items-end lg:gap-8 lg:px-14 lg:pt-20 lg:pb-14 xl:px-16">
             <div className="lg:col-span-7">
               <p className="flex items-center gap-3 text-xs font-bold tracking-[0.12em] text-[#c7f33f] uppercase">
-                <span className="h-0.5 w-9 rounded-full bg-[#c7f33f]" />
+                <span
+                  className="h-0.5 w-9 rounded-full bg-[#c7f33f]"
+                  aria-hidden="true"
+                />
                 Vamos continuar por perto
               </p>
 
@@ -46,7 +50,10 @@ export function Footer() {
                 <span className="block text-[#c7f33f]">em breve.</span>
               </h2>
 
-              <p className="mt-7 max-w-md text-base leading-7 text-white/68 sm:text-lg">
+              <p
+                id="footer-description"
+                className="mt-7 max-w-md text-base leading-7 text-white/68 sm:text-lg"
+              >
                 Ou agora mesmo, se já existe uma ideia pedindo para sair do
                 papel.
               </p>
@@ -69,27 +76,37 @@ export function Footer() {
               </a>
             </div>
 
-            <div className="rounded-[1.4rem] border border-white/15 bg-white/[0.08] p-4 shadow-[0_22px_50px_rgba(6,31,99,0.18)] backdrop-blur-xl sm:p-6 lg:col-span-4 lg:col-start-9">
-              <p className="font-mono text-[0.62rem] font-bold tracking-[0.16em] text-white/65 uppercase">
+            <nav
+              className="rounded-[1.4rem] border border-white/15 bg-white/[0.08] p-4 shadow-[0_22px_50px_rgba(6,31,99,0.18)] backdrop-blur-xl sm:p-6 lg:col-span-4 lg:col-start-9"
+              aria-labelledby="footer-navigation-title"
+            >
+              <p
+                id="footer-navigation-title"
+                className="font-mono text-[0.62rem] font-bold tracking-[0.16em] text-white/65 uppercase"
+              >
                 Navegue
               </p>
 
-              <nav className="mt-4" aria-label="Links do rodapé">
+              <ul className="mt-4" role="list">
                 {footerLinks.map((item) => (
-                  <a
+                  <li
                     key={item.name}
-                    href={item.href}
-                    className="group flex items-center justify-between gap-4 border-b border-white/12 py-2.5 text-base font-semibold text-white transition-colors last:border-b-0 hover:text-[#c7f33f] focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c7f33f] sm:py-3.5"
+                    className="border-b border-white/12 last:border-b-0"
                   >
-                    {item.name}
-                    <ArrowUpRight
-                      className="size-4 text-[#c7f33f] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
-                      aria-hidden="true"
-                    />
-                  </a>
+                    <a
+                      href={item.href}
+                      className="group flex items-center justify-between gap-4 py-2.5 text-base font-semibold text-white transition-colors hover:text-[#c7f33f] focus-visible:rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c7f33f] sm:py-3.5"
+                    >
+                      {item.name}
+                      <ArrowUpRight
+                        className="size-4 text-[#c7f33f] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
+                        aria-hidden="true"
+                      />
+                    </a>
+                  </li>
                 ))}
-              </nav>
-            </div>
+              </ul>
+            </nav>
           </div>
 
           <div className="border-t border-white/13">
@@ -111,10 +128,15 @@ export function Footer() {
               Zapt
             </a>
 
-            <p className="text-right lg:text-center">© 2026 Zapt</p>
+            <small className="text-right text-sm lg:text-center">
+              © 2026 Zapt
+            </small>
 
               <p className="col-span-2 flex items-center gap-2 lg:col-span-1 lg:justify-self-end">
-                <span className="size-2 rounded-full bg-[#c7f33f]" />
+                <span
+                  className="size-2 rounded-full bg-[#c7f33f]"
+                  aria-hidden="true"
+                />
                 Brasil · projetos digitais
               </p>
             </div>
