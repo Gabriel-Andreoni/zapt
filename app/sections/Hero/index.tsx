@@ -40,7 +40,7 @@ export default function Hero() {
         <div className="mx-auto w-[calc(100%-2rem)] max-w-7xl sm:w-[calc(100%-3rem)]">
           <div className="relative">
             <div className="grid grid-cols-2 gap-4 md:gap-5 lg:gap-6 xl:grid-cols-4 xl:grid-rows-2">
-              <article
+              <header
                 className={`${cardBase} col-span-2 border-white/15 bg-brand-primary bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:min-h-[32rem] lg:p-[2.65rem] xl:row-span-2 xl:min-h-[38rem]`}
               >
                 <div
@@ -54,10 +54,14 @@ export default function Hero() {
 
                 <div className="relative z-10 flex h-full flex-col justify-between gap-10">
                   <div>
-                    <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs leading-none font-semibold text-white/90 backdrop-blur-sm">
-                      <Sparkles size={16} strokeWidth={2} />
+                    <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs leading-none font-semibold text-white/90 backdrop-blur-sm">
+                      <Sparkles
+                        size={16}
+                        strokeWidth={2}
+                        aria-hidden="true"
+                      />
                       Olá, nós somos a Zapt.
-                    </span>
+                    </p>
 
                     <h1
                       id="hero-title"
@@ -82,7 +86,7 @@ export default function Hero() {
                       className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_8px_24px_rgba(16,24,43,0.15)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-surface-soft hover:shadow-[0_12px_30px_rgba(16,24,43,0.22)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
                     >
                       Conheça nossas soluções
-                      <ArrowRight size={17} />
+                      <ArrowRight size={17} aria-hidden="true" />
                     </a>
                     <a
                       href="#contato"
@@ -99,13 +103,17 @@ export default function Hero() {
                 >
                   ZAPT / DIGITAL
                 </span>
-              </article>
+              </header>
 
-              <article
+              <section
                 className={`${cardBase} col-span-2 flex flex-col justify-between gap-5 bg-[radial-gradient(circle_at_92%_4%,rgba(5,84,242,0.12),transparent_10rem)] bg-white/90 text-ink backdrop-blur-sm sm:min-h-68 xl:min-h-0`}
+                aria-labelledby="modern-stack-title"
               >
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.22)]">
+                  <span
+                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.22)]"
+                    aria-hidden="true"
+                  >
                     <Code2 size={21} />
                   </span>
                   <span className={`${cardLabel} text-brand-primary/50`}>
@@ -114,7 +122,10 @@ export default function Hero() {
                 </div>
 
                 <div>
-                  <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
+                  <h2
+                    id="modern-stack-title"
+                    className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit"
+                  >
                     Stack moderna
                   </h2>
                   <p className="mt-2 max-w-lg text-sm leading-6 text-ink/65">
@@ -123,20 +134,25 @@ export default function Hero() {
                   </p>
                 </div>
 
-                <div className="flex flex-wrap gap-2" aria-label="Tecnologias">
+                <ul
+                  className="flex flex-wrap gap-2"
+                  aria-label="Tecnologias utilizadas"
+                  role="list"
+                >
                   {technologies.map((tech) => (
-                    <span
+                    <li
                       key={tech}
                       className="rounded-full border border-brand-primary/15 bg-surface-soft px-3 py-1.5 text-xs font-bold text-brand-primary"
                     >
                       {tech}
-                    </span>
+                    </li>
                   ))}
-                </div>
-              </article>
+                </ul>
+              </section>
 
-              <article
+              <section
                 className={`${cardBase} col-span-2 flex flex-col justify-between gap-8 bg-surface-sky text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 xl:min-h-0`}
+                aria-labelledby="digital-presence-title"
               >
                 <div
                   className="absolute top-15 -right-16 aspect-square w-48 rounded-full border border-brand-secondary/25 before:absolute before:inset-8 before:rounded-full before:border before:border-brand-secondary/25 before:content-['']"
@@ -147,7 +163,10 @@ export default function Hero() {
                 </div>
 
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl border border-brand-secondary/20 bg-white/70 text-brand-secondary-strong">
+                  <span
+                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl border border-brand-secondary/20 bg-white/70 text-brand-secondary-strong"
+                    aria-hidden="true"
+                  >
                     <Globe size={21} />
                   </span>
                   <span className={`${cardLabel} text-brand-primary/50`}>
@@ -156,20 +175,27 @@ export default function Hero() {
                 </div>
 
                 <div className="relative z-10">
-                  <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
+                  <h2
+                    id="digital-presence-title"
+                    className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit"
+                  >
                     Presença digital
                   </h2>
                   <p className="mt-2 text-sm leading-6 text-ink/65">
                     Produtos que conectam sua marca ao mundo.
                   </p>
                 </div>
-              </article>
+              </section>
 
-              <article
+              <section
                 className={`${cardBase} col-span-2 flex flex-col justify-between gap-8 bg-brand-highlight text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 xl:min-h-0`}
+                aria-labelledby="performance-title"
               >
                 <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-brand-highlight">
+                  <span
+                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-brand-highlight"
+                    aria-hidden="true"
+                  >
                     <Zap size={21} fill="currentColor" />
                   </span>
                   <span className={`${cardLabel} text-ink/50`}>SPEED</span>
@@ -177,7 +203,10 @@ export default function Hero() {
 
                 <div className="relative z-10 flex items-end justify-between gap-4">
                   <div>
-                    <h2 className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit">
+                    <h2
+                      id="performance-title"
+                      className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit"
+                    >
                       Performance
                     </h2>
                     <p className="mt-2 text-sm leading-6 text-ink/65">
@@ -186,7 +215,7 @@ export default function Hero() {
                   </div>
                   <PerformanceSignal />
                 </div>
-              </article>
+              </section>
             </div>
           </div>
         </div>
