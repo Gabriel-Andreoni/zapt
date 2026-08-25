@@ -46,11 +46,11 @@ export function About() {
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 md:mb-14">
-          <span className="inline-flex items-center gap-2 rounded-full border border-brand-primary/10 bg-brand-primary/10 px-3 py-1.5 text-sm font-semibold text-brand-primary">
-            <Sparkles className="size-4" />
+        <header className="mb-10 md:mb-14">
+          <p className="inline-flex items-center gap-2 rounded-full border border-brand-primary/10 bg-brand-primary/10 px-3 py-1.5 text-sm font-semibold text-brand-primary">
+            <Sparkles className="size-4" aria-hidden="true" />
             Sobre a Zapt
-          </span>
+          </p>
           <h2
             id="about-title"
             className="mt-4 max-w-4xl text-3xl font-bold tracking-[-0.04em] text-ink text-balance md:text-4xl lg:text-5xl"
@@ -62,11 +62,12 @@ export function About() {
             com decisões bem explicadas e qualidade que permanece depois do
             lançamento.
           </p>
-        </div>
+        </header>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-12 lg:auto-rows-[minmax(14rem,auto)]">
           <article
             className={`${cardBase} flex flex-col border-white/15 bg-brand-primary text-white shadow-[0_26px_70px_rgba(5,84,242,0.22)] md:col-span-2 md:min-h-[38rem] lg:col-span-7 lg:row-span-2 lg:min-h-0`}
+            aria-labelledby="method-title"
           >
             <div
               className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.26)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.26)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.13] [mask-image:radial-gradient(circle_at_90%_5%,black,transparent_68%)]"
@@ -79,19 +80,25 @@ export function About() {
 
             <div className="relative z-10 flex h-full flex-col">
               <div className="flex items-center justify-between gap-5">
-                <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/10 text-white ring-1 ring-white/20">
+                <span
+                  className="inline-flex size-12 items-center justify-center rounded-2xl bg-white/10 text-white ring-1 ring-white/20"
+                  aria-hidden="true"
+                >
                   <ScanSearch className="size-6" />
                 </span>
-                <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/85 uppercase">
+                <p className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/85 uppercase">
                   Nosso método
-                </span>
+                </p>
               </div>
 
               <div className="mt-8 max-w-2xl">
                 <p className="text-sm font-bold tracking-[0.12em] text-brand-highlight uppercase">
                   O negócio vem primeiro
                 </p>
-                <h3 className="mt-3 text-3xl leading-[1.05] font-semibold tracking-[-0.045em] text-balance md:text-4xl">
+                <h3
+                  id="method-title"
+                  className="mt-3 text-3xl leading-[1.05] font-semibold tracking-[-0.045em] text-balance md:text-4xl"
+                >
                   Antes de escrever código, entendemos o que precisa mudar.
                 </h3>
                 <p className="mt-4 max-w-xl text-base leading-7 text-white/85">
@@ -101,14 +108,21 @@ export function About() {
                 </p>
               </div>
 
-              <ol className="mt-auto grid gap-3 pt-10 sm:grid-cols-3">
+              <ol
+                className="mt-auto grid gap-3 pt-10 sm:grid-cols-3"
+                aria-label="Etapas do método da Zapt"
+                role="list"
+              >
                 {principles.map((principle, index) => (
                   <li
                     key={principle.title}
                     className="rounded-2xl border border-white/15 bg-white/[0.08] p-4 backdrop-blur-sm"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="inline-flex size-7 items-center justify-center rounded-full bg-brand-highlight text-xs font-bold text-ink">
+                      <span
+                        className="inline-flex size-7 items-center justify-center rounded-full bg-brand-highlight text-xs font-bold text-ink"
+                        aria-hidden="true"
+                      >
                         {index + 1}
                       </span>
                       <h4 className="font-bold text-white">
@@ -126,18 +140,25 @@ export function About() {
 
           <article
             className={`${cardBase} flex flex-col border-ink/10 bg-white/90 text-ink backdrop-blur-sm md:min-h-80 lg:col-span-5 lg:min-h-0`}
+            aria-labelledby="shared-decisions-title"
           >
             <div className="flex items-start justify-between gap-4">
-              <span className="inline-flex size-12 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.20)]">
+              <span
+                className="inline-flex size-12 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.20)]"
+                aria-hidden="true"
+              >
                 <MessageSquareText className="size-6" />
               </span>
-              <span className="rounded-full border border-brand-primary/10 bg-surface-soft px-3 py-1.5 text-xs font-bold text-brand-primary">
+              <p className="rounded-full border border-brand-primary/10 bg-surface-soft px-3 py-1.5 text-xs font-bold text-brand-primary">
                 Sem caixa-preta
-              </span>
+              </p>
             </div>
 
             <div className="mt-auto pt-8">
-              <h3 className="text-2xl leading-tight font-bold tracking-[-0.03em]">
+              <h3
+                id="shared-decisions-title"
+                className="text-2xl leading-tight font-bold tracking-[-0.03em]"
+              >
                 Decisões compartilhadas, do início ao fim
               </h3>
               <p className="mt-3 max-w-lg text-sm leading-6 text-ink/65 md:text-base">
@@ -150,27 +171,41 @@ export function About() {
 
           <article
             className={`${cardBase} flex flex-col border-brand-secondary/15 bg-surface-sky text-ink md:min-h-80 lg:col-span-5 lg:min-h-0`}
+            aria-labelledby="quality-title"
           >
             <div
               className="pointer-events-none absolute -top-20 -right-16 size-56 rounded-full border border-brand-secondary/15 before:absolute before:inset-8 before:rounded-full before:border before:border-brand-secondary/15 before:content-['']"
               aria-hidden="true"
             />
 
-            <span className="relative z-10 inline-flex size-12 items-center justify-center rounded-2xl bg-white/75 text-brand-secondary-strong ring-1 ring-brand-secondary/20">
+            <span
+              className="relative z-10 inline-flex size-12 items-center justify-center rounded-2xl bg-white/75 text-brand-secondary-strong ring-1 ring-brand-secondary/20"
+              aria-hidden="true"
+            >
               <ShieldCheck className="size-6" />
             </span>
 
             <div className="relative z-10 mt-7">
-              <h3 className="text-2xl leading-tight font-bold tracking-[-0.03em]">
+              <h3
+                id="quality-title"
+                className="text-2xl leading-tight font-bold tracking-[-0.03em]"
+              >
                 Qualidade que pode ser percebida
               </h3>
-              <ul className="mt-5 grid gap-2.5 sm:grid-cols-3 lg:grid-cols-1">
+              <ul
+                className="mt-5 grid gap-2.5 sm:grid-cols-3 lg:grid-cols-1"
+                aria-label="Critérios de qualidade"
+                role="list"
+              >
                 {qualityChecks.map((item) => (
                   <li
                     key={item}
                     className="flex items-center gap-2.5 text-sm font-semibold text-ink/70"
                   >
-                    <span className="inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-brand-primary text-white">
+                    <span
+                      className="inline-flex size-5 shrink-0 items-center justify-center rounded-full bg-brand-primary text-white"
+                      aria-hidden="true"
+                    >
                       <Check className="size-3" strokeWidth={3} />
                     </span>
                     {item}
@@ -182,17 +217,24 @@ export function About() {
 
           <article
             className={`${cardBase} flex flex-col border-ink/10 bg-brand-highlight text-ink md:min-h-72 lg:col-span-4 lg:min-h-0`}
+            aria-labelledby="tailored-title"
           >
             <div className="flex items-center justify-between gap-4">
-              <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-ink text-brand-highlight">
+              <span
+                className="inline-flex size-11 items-center justify-center rounded-2xl bg-ink text-brand-highlight"
+                aria-hidden="true"
+              >
                 <Layers3 className="size-5" />
               </span>
-              <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-ink/45 uppercase">
+              <p className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-ink/45 uppercase">
                 Sob medida
-              </span>
+              </p>
             </div>
             <div className="mt-auto pt-6 md:pt-8">
-              <h3 className="text-xl font-bold tracking-[-0.025em]">
+              <h3
+                id="tailored-title"
+                className="text-xl font-bold tracking-[-0.025em]"
+              >
                 Só o que gera valor
               </h3>
               <p className="mt-2 text-sm leading-6 text-ink/65">
@@ -204,17 +246,24 @@ export function About() {
 
           <article
             className={`${cardBase} flex flex-col border-ink/10 bg-white/90 text-ink backdrop-blur-sm md:min-h-72 lg:col-span-4 lg:min-h-0`}
+            aria-labelledby="evolution-title"
           >
             <div className="flex items-center justify-between gap-4">
-              <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-surface-soft text-brand-primary ring-1 ring-brand-primary/10">
+              <span
+                className="inline-flex size-11 items-center justify-center rounded-2xl bg-surface-soft text-brand-primary ring-1 ring-brand-primary/10"
+                aria-hidden="true"
+              >
                 <ShieldCheck className="size-5" />
               </span>
-              <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-brand-primary/45 uppercase">
+              <p className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-brand-primary/45 uppercase">
                 Evolução
-              </span>
+              </p>
             </div>
             <div className="mt-auto pt-6 md:pt-8">
-              <h3 className="text-xl font-bold tracking-[-0.025em]">
+              <h3
+                id="evolution-title"
+                className="text-xl font-bold tracking-[-0.025em]"
+              >
                 Feito para continuar
               </h3>
               <p className="mt-2 text-sm leading-6 text-ink/65">
@@ -226,21 +275,28 @@ export function About() {
 
           <article
             className={`${cardBase} flex flex-col border-white/15 bg-ink text-white md:min-h-72 lg:col-span-4 lg:min-h-0`}
+            aria-labelledby="partnership-title"
           >
             <div
               className="pointer-events-none absolute -right-16 -bottom-24 size-60 rounded-full bg-brand-primary/35 blur-3xl"
               aria-hidden="true"
             />
             <div className="relative z-10 flex items-center justify-between gap-4">
-              <span className="inline-flex size-11 items-center justify-center rounded-2xl bg-white/10 text-brand-highlight ring-1 ring-white/10">
+              <span
+                className="inline-flex size-11 items-center justify-center rounded-2xl bg-white/10 text-brand-highlight ring-1 ring-white/10"
+                aria-hidden="true"
+              >
                 <HeartHandshake className="size-5" />
               </span>
-              <span className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/50 uppercase">
+              <p className="font-mono text-[0.65rem] font-bold tracking-[0.14em] text-white/50 uppercase">
                 Parceria
-              </span>
+              </p>
             </div>
             <div className="relative z-10 mt-auto pt-6 md:pt-8">
-              <h3 className="text-xl font-bold tracking-[-0.025em]">
+              <h3
+                id="partnership-title"
+                className="text-xl font-bold tracking-[-0.025em]"
+              >
                 Presença depois da entrega
               </h3>
               <p className="mt-2 text-sm leading-6 text-white/60">
@@ -252,7 +308,10 @@ export function About() {
                 className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-brand-highlight focus-visible:rounded-sm focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight"
               >
                 Converse com a Zapt
-                <ArrowRight className="size-4 transition-all duration-300 group-hover:translate-x-1 motion-reduce:transition-none" />
+                <ArrowRight
+                  className="size-4 transition-all duration-300 group-hover:translate-x-1 motion-reduce:transition-none"
+                  aria-hidden="true"
+                />
               </a>
             </div>
           </article>
