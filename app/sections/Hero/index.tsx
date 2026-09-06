@@ -1,225 +1,99 @@
-import { ArrowRight, Code2, Globe, Sparkles, Zap } from "lucide-react";
-import Header from "../Menu";
+"use client";
 
-const technologies = ["React", "TypeScript", "Next.js", "Node"];
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 
-const cardBase =
-  "group relative min-w-0 overflow-hidden rounded-3xl border border-ink/10 p-[clamp(1.35rem,3vw,2rem)] shadow-[0_18px_50px_rgba(16,24,43,0.07)] transition-all duration-200 hover:-translate-y-1 hover:border-brand-primary/20 hover:shadow-[0_24px_65px_rgba(16,24,43,0.13)] motion-reduce:transition-none";
+const navigation = [
+  { label: "Serviços", href: "#produtos" },
+  { label: "Sobre", href: "#sobre" },
+  { label: "Contato", href: "#contato" },
+];
 
-const cardLabel =
-  "font-mono text-[0.62rem] font-bold tracking-[0.12em] uppercase";
+const focus =
+  "focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight";
 
-function PerformanceSignal() {
+function HeroNavigation() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <div
-      className="flex h-[3.8rem] w-[4.75rem] shrink-0 items-end gap-1 border-b border-ink/30 pb-1"
-      aria-hidden="true"
-    >
-      {[42, 64, 52, 82, 70, 100].map((height, index) => (
-        <span
-          key={height}
-          className="h-full w-full origin-bottom animate-pulse rounded-t-full rounded-b-sm bg-ink motion-reduce:animate-none"
-          style={{
-            height: `${height}%`,
-            animationDelay: `${index * 120}ms`,
-          }}
-        />
-      ))}
+    <header className="relative z-20 mx-auto flex w-full max-w-[96rem] items-center justify-between gap-6 px-6 py-6 sm:px-10 lg:px-14 lg:py-7">
+      <Link href="/" aria-label="Zapt — página inicial" className={`flex shrink-0 items-center gap-3 rounded-lg ${focus}`}>
+        <span className="flex size-10 items-center justify-center rounded-xl bg-white p-1.5 sm:size-12">
+          <Image src="/logo.png" alt="" width={120} height={180} loading="eager" className="h-full w-auto" />
+        </span>
+        <span className="text-3xl font-bold tracking-[-0.06em] sm:text-4xl">Zapt</span>
+      </Link>
+
+      <nav aria-label="Navegação principal" className="hidden items-center gap-9 md:flex lg:gap-12">
+        {navigation.map(({ label, href }) => (
+          <a key={href} href={href} className={`rounded-sm py-3 text-sm font-medium text-white/90 transition-colors hover:text-brand-highlight ${focus}`}>{label}</a>
+        ))}
+        <a href="#contato" className={`inline-flex min-h-12 items-center gap-3 rounded-xl border border-white/60 px-5 text-sm font-medium transition-colors hover:border-brand-highlight hover:text-brand-highlight ${focus}`}>
+          Orçamento <ArrowUpRight size={19} aria-hidden="true" />
+        </a>
+      </nav>
+
+      <button type="button" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} aria-controls="hero-code-menu" onClick={() => setMenuOpen(!menuOpen)} className={`flex size-12 items-center justify-center rounded-xl border border-white/30 transition-colors hover:bg-white/10 md:hidden ${focus}`}>
+        {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+      </button>
+      {menuOpen && (
+        <nav id="hero-code-menu" aria-label="Navegação móvel" onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            setMenuOpen(false);
+            event.currentTarget.parentElement?.querySelector("button")?.focus();
+          }
+        }} className="absolute top-full right-6 left-6 rounded-2xl border border-white/20 bg-[#08152c] p-3 shadow-xl md:hidden">
+          {navigation.map(({ label, href }) => (
+            <a key={href} href={href} onClick={() => setMenuOpen(false)} className={`block rounded-lg px-4 py-3 font-medium transition-colors hover:bg-white/10 ${focus}`}>{label}</a>
+          ))}
+          <a href="#contato" onClick={() => setMenuOpen(false)} className={`mt-2 flex items-center justify-between rounded-lg bg-brand-highlight px-4 py-3 font-semibold text-ink ${focus}`}>
+            Orçamento <ArrowUpRight size={19} aria-hidden="true" />
+          </a>
+        </nav>
+      )}
+    </header>
+  );
+}
+
+function CodeBackdrop() {
+  return (
+    <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-24 bottom-0 overflow-hidden select-none">
+      <svg viewBox="0 0 1536 900" preserveAspectRatio="none" focusable="false" className="absolute inset-0 h-full w-full">
+        <path d="M820 0H973L665 900H512Z" className="fill-brand-primary/15" />
+      </svg>
+      <svg viewBox="0 0 400 720" preserveAspectRatio="none" focusable="false" className="absolute top-1/2 left-[3%] h-[48%] w-[14%] -translate-y-1/2 fill-brand-primary/65 sm:h-[68%] sm:w-[22%] sm:fill-brand-primary">
+        <path d="M376 24L24 360L376 696V554L172 360L376 166Z" />
+      </svg>
+      <svg viewBox="0 0 400 720" preserveAspectRatio="none" focusable="false" className="absolute top-1/2 right-[3%] h-[48%] w-[14%] -translate-y-1/2 fill-brand-primary/65 sm:h-[68%] sm:w-[22%] sm:fill-brand-primary">
+        <path d="M24 24L376 360L24 696V554L228 360L24 166Z" />
+      </svg>
     </div>
   );
 }
 
 export default function Hero() {
   return (
-    <>
-      <Header />
-      <section
-        className="relative isolate w-full overflow-hidden pt-[clamp(9.25rem,14vw,10.75rem)] pb-8 md:pb-12 lg:pt-[11.25rem] lg:pb-16"
-        aria-labelledby="hero-title"
-      >
-        <div className="mx-auto w-[calc(100%-2rem)] max-w-7xl sm:w-[calc(100%-3rem)]">
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-4 md:gap-5 lg:gap-6 xl:grid-cols-4 xl:grid-rows-2">
-              <header
-                className={`${cardBase} col-span-2 border-white/15 bg-brand-primary bg-[linear-gradient(145deg,rgba(255,255,255,0.03),transparent_44%)] text-white shadow-[0_26px_70px_rgba(5,84,242,0.24),inset_0_1px_rgba(255,255,255,0.16)] hover:border-white/25 hover:shadow-[0_30px_80px_rgba(5,84,242,0.30)] md:min-h-[32rem] lg:p-[2.65rem] xl:row-span-2 xl:min-h-[38rem]`}
-              >
-                <div
-                  className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.35)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.35)_1px,transparent_1px)] bg-[size:40px_40px] opacity-[0.17] [mask-image:radial-gradient(circle_at_82%_22%,black,transparent_62%)]"
-                  aria-hidden="true"
-                />
-                <div
-                  className="absolute -top-20 -right-16 aspect-square w-76 rounded-full bg-brand-secondary/35 blur-[55px]"
-                  aria-hidden="true"
-                />
-
-                <div className="relative z-10 flex h-full flex-col justify-between gap-10">
-                  <div>
-                    <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-xs leading-none font-semibold text-white/90 backdrop-blur-sm">
-                      <Sparkles
-                        size={16}
-                        strokeWidth={2}
-                        aria-hidden="true"
-                      />
-                      Olá, nós somos a Zapt.
-                    </p>
-
-                    <h1
-                      id="hero-title"
-                      className="mt-6 max-w-[12ch] text-[clamp(1.9rem,9vw,4.15rem)] leading-[0.98] font-semibold tracking-[-0.055em] text-balance text-white"
-                    >
-                      Transformamos ideias em{" "}
-                      <span className="text-white/70">
-                        experiências digitais
-                      </span>
-                    </h1>
-
-                    <p className="mt-5 max-w-xl text-[clamp(0.98rem,2vw,1.08rem)] leading-[1.65] text-white/85">
-                      Desenvolvemos sistemas web, aplicativos e soluções
-                      personalizadas com tecnologia moderna para destacar sua
-                      empresa.
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col items-stretch gap-3 min-[560px]:flex-row min-[560px]:flex-wrap min-[560px]:items-center">
-                    <a
-                      href="#produtos"
-                      className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-bold text-brand-primary shadow-[0_8px_24px_rgba(16,24,43,0.15)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-surface-soft hover:shadow-[0_12px_30px_rgba(16,24,43,0.22)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
-                    >
-                      Conheça nossas soluções
-                      <ArrowRight size={17} aria-hidden="true" />
-                    </a>
-                    <a
-                      href="#contato"
-                      className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-white/15 focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-brand-highlight motion-reduce:transition-none"
-                    >
-                      Fale com a gente
-                    </a>
-                  </div>
-                </div>
-
-                <span
-                  className={`${cardLabel} absolute right-6 bottom-6 hidden text-white/35 sm:block`}
-                  aria-hidden="true"
-                >
-                  ZAPT / DIGITAL
-                </span>
-              </header>
-
-              <section
-                className={`${cardBase} col-span-2 flex flex-col justify-between gap-5 bg-[radial-gradient(circle_at_92%_4%,rgba(5,84,242,0.12),transparent_10rem)] bg-white/90 text-ink backdrop-blur-sm sm:min-h-68 xl:min-h-0`}
-                aria-labelledby="modern-stack-title"
-              >
-                <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span
-                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-brand-primary text-white shadow-[0_10px_25px_rgba(5,84,242,0.22)]"
-                    aria-hidden="true"
-                  >
-                    <Code2 size={21} />
-                  </span>
-                  <span className={`${cardLabel} text-brand-primary/50`}>
-                    BUILD
-                  </span>
-                </div>
-
-                <div>
-                  <h2
-                    id="modern-stack-title"
-                    className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit"
-                  >
-                    Stack moderna
-                  </h2>
-                  <p className="mt-2 max-w-lg text-sm leading-6 text-ink/65">
-                    Ferramentas atuais, escolhidas para dar velocidade,
-                    segurança e espaço para crescer.
-                  </p>
-                </div>
-
-                <ul
-                  className="flex flex-wrap gap-2"
-                  aria-label="Tecnologias utilizadas"
-                  role="list"
-                >
-                  {technologies.map((tech) => (
-                    <li
-                      key={tech}
-                      className="rounded-full border border-brand-primary/15 bg-surface-soft px-3 py-1.5 text-xs font-bold text-brand-primary"
-                    >
-                      {tech}
-                    </li>
-                  ))}
-                </ul>
-              </section>
-
-              <section
-                className={`${cardBase} col-span-2 flex flex-col justify-between gap-8 bg-surface-sky text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 xl:min-h-0`}
-                aria-labelledby="digital-presence-title"
-              >
-                <div
-                  className="absolute top-15 -right-16 aspect-square w-48 rounded-full border border-brand-secondary/25 before:absolute before:inset-8 before:rounded-full before:border before:border-brand-secondary/25 before:content-['']"
-                  aria-hidden="true"
-                >
-                  <span className="absolute top-1/2 -left-1 size-2 rounded-full bg-brand-secondary shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
-                  <span className="absolute top-[14%] left-[46%] size-1.5 rounded-full bg-brand-secondary shadow-[0_0_0_6px_rgba(24,168,232,0.10)]" />
-                </div>
-
-                <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span
-                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl border border-brand-secondary/20 bg-white/70 text-brand-secondary-strong"
-                    aria-hidden="true"
-                  >
-                    <Globe size={21} />
-                  </span>
-                  <span className={`${cardLabel} text-brand-primary/50`}>
-                    REACH
-                  </span>
-                </div>
-
-                <div className="relative z-10">
-                  <h2
-                    id="digital-presence-title"
-                    className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit"
-                  >
-                    Presença digital
-                  </h2>
-                  <p className="mt-2 text-sm leading-6 text-ink/65">
-                    Produtos que conectam sua marca ao mundo.
-                  </p>
-                </div>
-              </section>
-
-              <section
-                className={`${cardBase} col-span-2 flex flex-col justify-between gap-8 bg-brand-highlight text-ink min-[560px]:col-span-1 min-[560px]:min-h-60 xl:min-h-0`}
-                aria-labelledby="performance-title"
-              >
-                <div className="relative z-10 flex items-center justify-between gap-4">
-                  <span
-                    className="inline-flex size-11 shrink-0 items-center justify-center rounded-2xl bg-ink text-brand-highlight"
-                    aria-hidden="true"
-                  >
-                    <Zap size={21} fill="currentColor" />
-                  </span>
-                  <span className={`${cardLabel} text-ink/50`}>SPEED</span>
-                </div>
-
-                <div className="relative z-10 flex items-end justify-between gap-4">
-                  <div>
-                    <h2
-                      id="performance-title"
-                      className="text-[clamp(1.25rem,2vw,1.55rem)] leading-[1.1] font-semibold tracking-[-0.035em] text-inherit"
-                    >
-                      Performance
-                    </h2>
-                    <p className="mt-2 text-sm leading-6 text-ink/65">
-                      Entregas rápidas e resultados mensuráveis.
-                    </p>
-                  </div>
-                  <PerformanceSignal />
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <section id="inicio" aria-labelledby="hero-code-title" className="relative isolate flex min-h-dvh flex-col overflow-hidden bg-[#08152c] text-white">
+      <HeroNavigation />
+      <CodeBackdrop />
+      <div className="relative z-10 mx-auto flex w-full max-w-[90rem] flex-1 flex-col items-center justify-center px-6 pt-16 pb-20 text-center sm:px-10 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28">
+        <p className="max-w-[32ch] text-[0.65rem] leading-6 font-bold tracking-[0.18em] text-balance text-brand-highlight uppercase sm:max-w-none sm:text-xs lg:text-sm">
+          Design que conecta. Código que transforma.
+        </p>
+        <h1 id="hero-code-title" className="mt-7 text-[clamp(2.6rem,8.4vw,8rem)] leading-[1.03] font-bold tracking-[-0.065em] sm:mt-9">
+          <span className="block">Da ideia ao</span>
+          <span className="block">próximo nível<span className="text-brand-highlight">.</span></span>
+        </h1>
+        <p className="mt-7 max-w-[43ch] text-base leading-relaxed text-pretty text-white/85 sm:mt-8 sm:text-lg lg:text-xl">
+          Desenvolvemos sites, aplicativos e sistemas para mover seu negócio.
+        </p>
+        <a href="#contato" className={`group mt-9 inline-flex min-h-14 items-center justify-center gap-5 rounded-xl bg-brand-highlight px-6 py-4 text-base font-bold text-ink transition-[background-color,transform] duration-200 hover:-translate-y-1 hover:bg-[#c9f34a] motion-reduce:transform-none motion-reduce:transition-none sm:mt-11 sm:min-h-16 sm:px-9 sm:text-lg ${focus}`}>
+          Comece seu projeto
+          <ArrowUpRight className="size-5 shrink-0 sm:size-6" aria-hidden="true" />
+        </a>
+      </div>
+    </section>
   );
 }
