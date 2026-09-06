@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import { PrimaryAction } from "@/components/ui/primary-action";
 
 const footerLinks = [
   { name: "Serviços", href: "#produtos" },
@@ -58,22 +59,15 @@ export function Footer() {
                 papel.
               </p>
 
-              <a
+              <PrimaryAction
                 href={`https://wa.me/?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noreferrer"
-                className="group mt-8 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#c7f33f] px-4 py-3 pr-5 text-sm font-bold text-ink shadow-[0_14px_35px_rgba(199,243,63,0.20)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_18px_42px_rgba(199,243,63,0.28)] focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#c7f33f] motion-reduce:transition-none"
+                className="mt-8"
                 aria-label="Chamar a Zapt no WhatsApp (abre em uma nova aba)"
               >
-                <span className="inline-flex size-9 items-center justify-center rounded-full bg-ink text-[#c7f33f]">
-                  <MessageCircle className="size-[1.1rem]" aria-hidden="true" />
-                </span>
                 Chamar no WhatsApp
-                <ArrowUpRight
-                  className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
-                  aria-hidden="true"
-                />
-              </a>
+              </PrimaryAction>
             </div>
 
             <nav
