@@ -89,7 +89,7 @@ export default function Hero() {
         <p className="mt-7 max-w-[43ch] text-base leading-relaxed text-pretty text-white/85 sm:mt-8 sm:text-lg lg:text-xl">
           Desenvolvemos sites, aplicativos e sistemas para mover seu negócio.
         </p>
-        <a href="#contato" className={`group mt-9 inline-flex min-h-14 items-center justify-center gap-5 rounded-xl bg-brand-highlight px-6 py-4 text-base font-bold text-ink transition-[background-color,transform] duration-200 hover:-translate-y-1 hover:bg-[#c9f34a] motion-reduce:transform-none motion-reduce:transition-none sm:mt-11 sm:min-h-16 sm:px-9 sm:text-lg ${focus}`}>
+        <a href="#contato" className={`group mt-9 inline-flex min-h-14 items-center justify-center gap-5 rounded-xl bg-brand-highlight px-6 py-4 text-base font-bold text-ink transition-all duration-200 hover:-translate-y-1 hover:bg-[#c9f34a] motion-reduce:transform-none motion-reduce:transition-none sm:mt-11 sm:min-h-16 sm:px-9 sm:text-lg ${focus}`}>
           Comece seu projeto
           <ArrowUpRight className="size-5 shrink-0 sm:size-6" aria-hidden="true" />
         </a>
