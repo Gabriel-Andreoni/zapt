@@ -60,7 +60,7 @@ function HeroNavigation() {
 function CodeBackdrop() {
   return (
     <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-24 bottom-0 overflow-hidden select-none">
-      <svg viewBox="0 0 1536 900" preserveAspectRatio="none" focusable="false" className="absolute inset-0 h-full w-full">
+      <svg viewBox="0 0 1536 900" preserveAspectRatio="none" focusable="false" className="absolute inset-x-0 top-1/2 h-[75dvh] w-full -translate-y-1/2">
         <path d="M820 0H973L665 900H512Z" className="fill-brand-primary/15" />
       </svg>
       <svg viewBox="0 0 400 720" preserveAspectRatio="none" focusable="false" className="absolute top-1/2 left-[3%] h-[48%] w-[14%] -translate-y-1/2 fill-brand-primary/65 sm:h-[68%] sm:w-[22%] sm:fill-brand-primary">
