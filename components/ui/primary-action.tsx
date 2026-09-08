@@ -6,7 +6,7 @@ export function PrimaryAction({ children, className, ...props }: ComponentProps<
   return (
     <a
       className={cn(
-        "inline-flex min-h-14 max-w-full items-center justify-center gap-5 rounded-xl bg-brand-highlight px-6 py-4 text-center text-base font-bold text-ink transition-all duration-200 hover:-translate-y-1 hover:bg-[#c9f34a] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight motion-reduce:transform-none motion-reduce:transition-none sm:min-h-16 sm:px-9 sm:text-lg",
+        "inline-flex min-h-14 max-w-full items-center justify-center gap-5 rounded-lg bg-brand-highlight px-6 py-4 text-center text-base font-bold text-ink shadow-[0_14px_34px_rgba(185,229,50,0.16)] transition-[transform,background-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:bg-[#c9f34a] hover:shadow-[0_18px_42px_rgba(185,229,50,0.23)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-highlight motion-reduce:transform-none motion-reduce:transition-none sm:min-h-16 sm:px-8 sm:text-lg",
         className,
       )}
       {...props}
