@@ -226,18 +226,6 @@ export function Services() {
                   >
                     {product.description}
                   </p>
-
-                  <div className="mt-auto pt-8">
-                    <p
-                      className={`inline-flex items-center gap-2 text-sm font-bold ${tone.action}`}
-                    >
-                      Saiba mais
-                      <ArrowRight
-                        className="size-4 transition-all duration-300 group-hover:translate-x-1 motion-reduce:transition-none"
-                        aria-hidden="true"
-                      />
-                    </p>
-                  </div>
                 </div>
               </li>
             );
