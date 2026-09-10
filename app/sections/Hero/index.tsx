@@ -19,6 +19,7 @@ import { PrimaryAction } from "@/components/ui/primary-action";
 
 const navigation = [
   { label: "Serviços", href: "#produtos" },
+  { label: "Projetos", href: "#projetos" },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
 ];

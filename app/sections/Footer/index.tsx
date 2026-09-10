@@ -4,6 +4,7 @@ import { PrimaryAction } from "@/components/ui/primary-action";
 
 const footerLinks = [
   { name: "Serviços", href: "#produtos" },
+  { name: "Projetos", href: "#projetos" },
   { name: "Sobre", href: "#sobre" },
   { name: "Contato", href: "#contato" },
 ];
