@@ -110,13 +110,7 @@ export function Projects() {
       aria-labelledby="projects-title"
       className="relative isolate w-full scroll-mt-8 py-12 md:scroll-mt-16 md:py-16 lg:py-20"
     >
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
-      >
-        <div className="absolute -top-20 -right-40 size-[28rem] rounded-full border-[64px] border-brand-secondary/5" />
-        <div className="absolute top-12 right-0 size-96 rounded-full bg-brand-secondary/5 blur-3xl" />
-      </div>
+      
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="mb-8 md:mb-12">
