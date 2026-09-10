@@ -2,7 +2,16 @@ import type { ComponentProps } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-export function PrimaryAction({ children, className, ...props }: ComponentProps<"a">) {
+type PrimaryActionProps = ComponentProps<"a"> & {
+  labelClassName?: string;
+};
+
+export function PrimaryAction({
+  children,
+  className,
+  labelClassName,
+  ...props
+}: PrimaryActionProps) {
   return (
     <a
       className={cn(
@@ -11,7 +20,9 @@ export function PrimaryAction({ children, className, ...props }: ComponentProps<
       )}
       {...props}
     >
-      <span className="min-w-0 text-balance">{children}</span>
+      <span className={cn("min-w-0 text-balance", labelClassName)}>
+        {children}
+      </span>
       <ArrowUpRight className="size-5 shrink-0 sm:size-6" aria-hidden="true" />
     </a>
   );

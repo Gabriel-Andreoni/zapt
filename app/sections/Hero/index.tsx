@@ -343,11 +343,17 @@ export default function Hero() {
             sistemas claros, rápidos e preparados para evoluir.
           </p>
 
-          <div className="mt-8 flex flex-col items-stretch gap-3 min-[440px]:flex-row min-[440px]:items-center sm:mt-9">
-            <PrimaryAction href="#contato">Começar um projeto</PrimaryAction>
+          <div className="mt-8 flex flex-col items-stretch gap-3 sm:mt-9 sm:flex-row sm:items-center lg:flex-col lg:items-start xl:flex-row xl:items-center">
+            <PrimaryAction
+              href="#contato"
+              className="gap-2 px-5 sm:px-5"
+              labelClassName="whitespace-nowrap"
+            >
+              Começar um projeto
+            </PrimaryAction>
             <a
               href="#produtos"
-              className={`inline-flex min-h-14 items-center justify-center gap-3 rounded-lg px-5 text-sm font-bold text-white/78 transition-[background-color,color] duration-150 hover:bg-white/[0.07] hover:text-white sm:min-h-16 sm:text-base ${focus}`}
+              className={`inline-flex min-h-14 items-center justify-center gap-3 rounded-lg px-4 text-sm font-bold whitespace-nowrap text-white/78 transition-[background-color,color] duration-150 hover:bg-white/[0.07] hover:text-white sm:min-h-16 sm:text-base ${focus}`}
             >
               Ver nossas soluções
               <ArrowRight className="size-4" aria-hidden="true" />
