@@ -375,7 +375,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative z-10 lg:col-span-7 lg:pl-5">
+        <div className="relative z-10 hidden md:block lg:col-span-7 lg:pl-5">
           <ProjectStudio />
         </div>
       </div>
