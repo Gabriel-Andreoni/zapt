@@ -1,5 +1,5 @@
 import Image, { type StaticImageData } from "next/image";
-import { ArrowUpRight, House, LockKeyhole } from "lucide-react";
+import { LockKeyhole } from "lucide-react";
 import { PrimaryAction } from "@/components/ui/primary-action";
 import mvQuiosques from "@/public/projects/mv-quiosques.png";
 import valverdeEngenharia from "@/public/projects/valverde-engenharia.png";
@@ -93,13 +93,9 @@ function ProjectLink({ project }: { project: Project }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Visitar site da ${project.name} (abre em uma nova aba)`}
-      className="group/link inline-flex min-h-11 w-fit items-center gap-2 rounded-md text-base font-semibold text-brand-primary underline-offset-4 transition-colors duration-150 hover:text-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-primary motion-reduce:transition-none sm:text-lg"
+      className="inline-flex min-h-11 w-fit items-center rounded-md text-base font-semibold text-brand-primary underline-offset-4 transition-colors duration-150 hover:text-ink hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-primary motion-reduce:transition-none sm:text-lg"
     >
       Visitar site
-      <ArrowUpRight
-        className="size-4 transition-transform duration-150 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 motion-reduce:transform-none motion-reduce:transition-none sm:size-5"
-        aria-hidden="true"
-      />
     </a>
   );
 }
@@ -158,12 +154,6 @@ export function Projects() {
               <p className="mt-4 max-w-lg text-base leading-7 text-ink/70 sm:text-lg">
                 {featuredProject.description}
               </p>
-              <div className="mt-6 flex items-center gap-3 border-t border-brand-primary/10 pt-5 text-sm text-ink/70">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand-primary/8 text-brand-primary">
-                  <House className="size-5" aria-hidden="true" />
-                </span>
-                Construções em madeira
-              </div>
               <div className="mt-3">
                 <ProjectLink project={featuredProject} />
               </div>
